@@ -13,7 +13,7 @@
        <br>
        <br>
        <br>
-       <form action="logica/loguear.php" method="POST">
+       <form action="conexion/loguear.php" method="POST">
         <input type="text" name="usuario" placeholder="Digite su usuario">
          <br><br>
          <input type="password" name="clave" placeholder="digite clave">

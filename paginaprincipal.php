@@ -8,7 +8,7 @@ if(!isset($sesion)){
 
     echo "<h1> BIENVENIDO $sesion </h1><br>";
 
-    echo "<a href='logica/salir.php'>Salir</a>";
+    echo "<a href='conexion/salir.php'>Salir</a>";
 }
 
 ?>
