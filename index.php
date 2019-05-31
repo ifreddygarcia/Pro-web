@@ -16,7 +16,7 @@
     <title>LOGIN CON SESIONES</title>
 </head>
 <body>
-<!--div con clase contenedor que se adapte a el tamanño de una pantalla-->
+<!--div con clase contenedor que se adapte a el tamaño de una pantalla-->
     <div class="container">
 
        <center> <h1>LOGIN</h1><br>
