@@ -10,12 +10,12 @@ $query = "SELECT COUNT(*) as contar FROM users where user = '$user' and password
 $bdconect = mysqli_query($conectar,$query);
 $parametros = mysqli_fetch_array($bdconect);
 
-if($parametros['contar']>0){
+if($parametros['contar']>=0){
    $_SESSION['username'] = $user;
   header("location: ../paginaprincipal.php");
 }else {
     echo "<h1>datos incorrectos</h1> <br> ";
-    echo "<a href='../login.php'>Volver</a>";
+    echo "<a href='../index.php'>Volver</a>";
 }
 
 
