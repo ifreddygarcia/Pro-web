@@ -2,6 +2,6 @@
  $host = "localhost";
  $user = "root";
  $clave = "";
- $bd = "phpdesdecero";
+ $bd = "proweb";
  $conectar = mysqli_connect($host,$user,$clave,$bd);
  ?>
