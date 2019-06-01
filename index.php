@@ -34,9 +34,9 @@
         </form>
 		<br>
 <!-- link a página de Sing up -->
-		 <a href="">Sing up</a><br>
+		 <a href="views/signupUsers.html">Sign up</a><br>
 <!-- Link a Forgot Password-->
-		 <a href="">¿Olvidaste tu contraseña?</a>
+		 <a href="views/recoverPass.php">¿Olvidaste tu contraseña?</a>
         </center>
 </div>
 <!-- Scripts que trabajan con bootstrap para hacer la página responsive-->		

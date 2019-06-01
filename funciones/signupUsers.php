@@ -21,7 +21,8 @@
 	//$insert = mysqli_query($conectar, $insertQuery);
 	//Validación del registro
 	if ($conectar->query($insertQuery) === TRUE) {
-    echo "Has sido registrado exitosamente!";
+	    echo "Has sido registrado exitosamente!";
+	    //header("location: ../usuarios/signupUsers.html");
 	} else {
     echo "Error: " . $insertQuery . "<br>" . $conectar->error;
 }
