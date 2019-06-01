@@ -14,6 +14,7 @@
 <head>
     <meta charset="utf-8" />
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+    <link href="fonts/open-iconic-bootstrap.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Nube</title>
@@ -30,45 +31,51 @@
 
 <body>
 
-    
+    <!-- Este es el contenedor que tiene nuesto navbar y sidebar-->
     <div class="wrapper">
+        <!--Aqui empiesa la barra lateral -->
         <div class="sidebar" data-image="../assets/img/sidebar-5.jpg">
-            <!--
-        Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
-
-        Tip 2: you can also add an image using data-image tag
+    <!--
+        Tip 1: Puedes cambiar el color de la barra lateral usando: data-color="purple | blue | green | orange | red"
+        Tip 2: También puedes agregar una imagen usando la etiqueta data-image.
     -->
+            <!--Creamos otro contenedor donde empezaremos a trabajar con el sidebar-->
             <div class="sidebar-wrapper">
+                <!--La clase logo nos crea el encabezado del sidebar donde podemos agregar un logo, texto-->
                 <div class="logo">
                     <a href="javascript:;" class="simple-text">
-                      Nube
+                      Mi Nube
                     </a>
                 </div>
+                <!--Con la clase nav creamos un menu de navegacion usando el elemento ul y li que son para listas-->
                 <ul class="nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="dashboard.html">
-                            <i class="nc-icon nc-icon nc-paper-2"></i>
+                        <a class="nav-link" href="paginaprincipal.php">
+                            <!--Agregamos un icono para buscar un icono es es pecifico https://useiconic.com/open/ lo busca y solo se reemplaza su nombre-->
+                            <i class="oi oi-folder"></i>
                             <p>Carpeta o DD</p>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="./user.html">
-                            <i class="nc-icon nc-bell-55"></i>
+                        <a class="nav-link" href="paginaprincipal.php">
+                            <!-- <i class="nc-icon nc-bell-55"></i> -->
+                            <i class="oi oi-folder"></i>
                             <p>Carpeta o DD</p>
                         </a>
                     </li>
 
                     <li class="nav-item active active-pro">
-                        <a class="nav-link active" href="javascript:;">
+                        <a class="nav-link active" href="javascript:verusuarios();">
                             <i class="nc-icon nc-alien-33"></i>
-                            <p>Futuro boton </p>
+                            <p>Administrar usuarios </p>
                         </a>
                     </li>
-                </ul>
+                </ul><!--Fin menu de navegacion-->
             </div>
-        </div>
+        </div><!--Fin barra lateral-->
+        <!--Empieza el panel principal-->
         <div class="main-panel">
-            <!-- Navbar -->
+            <!-- Navbar inicia-->
             <nav class="navbar navbar-expand-lg " color-on-scroll="500">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#pablo">Template</a>
@@ -78,55 +85,23 @@
                         <span class="navbar-toggler-bar burger-lines"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                        <!--Parte izquierda del navbar-->
                         <ul class="nav navbar-nav mr-auto">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link" data-toggle="dropdown">
-                                    <i class="nc-icon nc-palette"></i>
-                                    <span class="d-lg-none">Dashboard</span>
-                                </a>
-                            </li>
                             <li class="dropdown nav-item">
                                 <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                                    <i class="nc-icon nc-planet"></i>
-                                    <span class="notification">5</span>
-                                    <span class="d-lg-none">Notification</span>
+                                    <span class="no-icon">Nuevo</span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Notification 1</a>
-                                    <a class="dropdown-item" href="#">Notification 2</a>
-                                    <a class="dropdown-item" href="#">Notification 3</a>
-                                    <a class="dropdown-item" href="#">Notification 4</a>
-                                    <a class="dropdown-item" href="#">Another notification</a>
+                                    <a class="dropdown-item" href="#">Nueva carpeta </a>
+                                    <a class="dropdown-item" href="#">Subir archivo</a>
+                                    <a class="dropdown-item" href="#">Subir carpeta</a>
                                 </ul>
                             </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="nc-icon nc-zoom-split"></i>
-                                    <span class="d-lg-block">&nbsp;Search</span>
-                                </a>
-                            </li>
                         </ul>
+                        <!--Parte derecha del navbar-->
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="#pablo">
-                                    <span class="no-icon">Account</span>
-                                </a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="no-icon">Dropdown</span>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                    <div class="divider"></div>
-                                    <a class="dropdown-item" href="#">Separated link</a>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#pablo">
+                                <a class="nav-link" href="conexion/salir.php">
                                     <span class="no-icon">Log out</span>
                                 </a>
                             </li>
@@ -135,66 +110,40 @@
                 </div>
             </nav>
             <!-- End Navbar -->
+            <!--Contenedor de vistas multiples en done se muestrara lo que seleccionemos en el sidebar-->
             <div class="content">
                 <div class="container-fluid">
                     <div class="section">
                     </div>
                 </div>
             </div>
-            <footer class="footer">
-                <div class="container-fluid">
-                    <nav>
-                        <ul class="footer-menu">
-                            <li>
-                                <a href="#">
-                                    Home
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Company
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Portfolio
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Blog
-                                </a>
-                            </li>
-                        </ul>
-                        <p class="copyright text-center">
-                            ©
-                            <script>
-                                document.write(new Date().getFullYear())
-                            </script>
-                            <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
-                        </p>
-                    </nav>
-                </div>
-            </footer>
+            <!--Fin del contenedor de vistas multiples-->
+            
         </div>
-    </div>
+    </div><!--Fin de el contenedor global-->
    
 </body>
+<!--pintamos en el contenedor seleccionado-->
+<script>
+    function verusuarios() {
+  $(document).ready(function () {
+      $('.section').load("admin/views/tablasUsuarios.php");
+    });
+}
+    
+  </script>
+<!--Todos estos script son muy utiles ayudan a que la pagina sea responsiva-->
 <!--   Core JS Files   -->
-<script src="../assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
-<script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
-<script src="../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+<script src="js/core/popper.min.js" type="text/javascript"></script>
+<script src="js/core/bootstrap.min.js" type="text/javascript"></script>
 <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
-<script src="../assets/js/plugins/bootstrap-switch.js"></script>
-<!--  Google Maps Plugin    -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+<script src="js/plugins/bootstrap-switch.js"></script>
 <!--  Chartist Plugin  -->
-<script src="../assets/js/plugins/chartist.min.js"></script>
+<script src="js/plugins/chartist.min.js"></script>
 <!--  Notifications Plugin    -->
-<script src="../assets/js/plugins/bootstrap-notify.js"></script>
+<script src="js/plugins/bootstrap-notify.js"></script>
 <!-- Control Center for Light Bootstrap Dashboard: scripts for the example pages etc -->
-<script src="../assets/js/light-bootstrap-dashboard.js?v=2.0.0 " type="text/javascript"></script>
-<!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
-<script src="../assets/js/demo.js"></script>
+<script src="js/light-bootstrap-dashboard.js?v=2.0.0 " type="text/javascript"></script>
 
 </html>
