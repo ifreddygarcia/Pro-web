@@ -69,6 +69,10 @@
                             <i class="nc-icon nc-alien-33"></i>
                             <p>Administrar usuarios </p>
                         </a>
+                        <a class="nav-link active" href="javascript:agregarusuarios();">
+                            <i class="nc-icon nc-alien-33"></i>
+                            <p>Agregar usuarios </p>
+                        </a>
                     </li>
                 </ul><!--Fin menu de navegacion-->
             </div>
@@ -124,14 +128,20 @@
    
 </body>
 <!--pintamos en el contenedor seleccionado-->
-<script>
-    function verusuarios() {
-  $(document).ready(function () {
-      $('.section').load("admin/views/tablasUsuarios.php");
-    });
-}
-    
-  </script>
+        <script>
+            function verusuarios() {
+          $(document).ready(function () {
+              $('.section').load("admin/views/tablasUsuarios.php");
+            });
+        }
+
+            function agregarusuarios() {
+          $(document).ready(function () {
+              $('.section').load("admin/views/signUpAdmin.php");
+            });
+        }
+            
+          </script>
 <!--Todos estos script son muy utiles ayudan a que la pagina sea responsiva-->
 <!--   Core JS Files   -->
 <script src="js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
