@@ -1,5 +1,5 @@
 <?php
-require ("/proweb/conexion/conexion.php");
+require '../../conexion/conexion.php';  
 $consultar=mysqli_query($conectar,"SELECT *from usuarios");
 
 ?>
