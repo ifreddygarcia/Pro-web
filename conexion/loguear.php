@@ -5,7 +5,7 @@ $user = $_POST['usuario'];
 $clave = $_POST['clave'];
 
 
-$query = "SELECT COUNT(*) as contar FROM usuarios where usuario = '$user' and clave = '$clave' ";
+$query = "SELECT COUNT(*) as contar FROM users where user = '$user' and password = '$clave' ";
 $bdconect = mysqli_query($conectar,$query);
 $parametros = mysqli_fetch_array($bdconect);
 
