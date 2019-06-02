@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<!-- Instanciando bootstrap -->
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title></title>
-</head>
-<body>
-<div class="container">
+<!--Humberto-->
+<!--Este archivo solo contiene las funciones de dar
+de alta un usuario y crearle un directorio en el 
+proyecto, no se visualiza-->
 <?php
 	//Referencia al archivo para crear conexión
 	require '../conexion/conexion.php';
@@ -35,10 +27,3 @@
     echo "Error: " . $insertQuery . "<br>" . $conectar->error;
 }
 ?>
-
-</div>
-<!-- Scripts que trabajan con bootstrap para hacer la página responsive-->		
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>		
-</body>
-</html>
