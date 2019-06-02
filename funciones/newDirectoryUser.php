@@ -1,3 +1,5 @@
+<!--Humberto-->
+<!--Archivo que tiene la función de crear directorios, no se visualiza-->
 <?php 
 	//Referencia al archivo para crear conexión
 	require '../conexion/conexion.php';

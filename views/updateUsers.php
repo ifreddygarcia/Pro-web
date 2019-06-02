@@ -1,13 +1,17 @@
 <!--By: Humberto-->
+<!--Nehemias, si ves este comentario-->
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Actualize </title>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>Actualizar  </title>
+	<!-- Instanciando bootstrap -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 <body>
-	<!--Segmento PHP para poder utilizar las funciones controladoras de consulta-->
+<div class="container">
 	<?php
 		include '../funciones/updateUsers.php';
 		extractData($selectUser);
@@ -39,5 +43,9 @@
 			<button type="submit" class="btn btn-primary"> Actualizar </button>
 		</div>
 	</form>
+</div>
+<!-- Scripts que trabajan con bootstrap para hacer la página responsive-->		
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>		
 </body>
 </html>
