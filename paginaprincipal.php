@@ -152,7 +152,7 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    Quipenes Somos
+                                    Quiénes Somos
                                 </a>
                             </li>
                            
@@ -169,7 +169,7 @@
             </footer>
 			<!--Fin del Footer-->
 
-            
+
         </div>
     </div><!--Fin de el contenedor global-->
    
