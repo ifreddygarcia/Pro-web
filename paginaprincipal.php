@@ -53,14 +53,28 @@
                         <a class="nav-link" href="paginaprincipal.php">
                             <!--Agregamos un icono para buscar un icono es es pecifico https://useiconic.com/open/ lo busca y solo se reemplaza su nombre-->
                             <i class="oi oi-folder"></i>
-                            <p>Carpeta o DD</p>
+                            <p>Disco</p>
                         </a>
                     </li>
                     <li>
                         <a class="nav-link" href="paginaprincipal.php">
                             <!-- <i class="nc-icon nc-bell-55"></i> -->
-                            <i class="oi oi-folder"></i>
-                            <p>Carpeta o DD</p>
+                            <i class="oi oi-musical-note"></i>
+                            <p>Música</p>
+                        </a>
+                    </li>
+					<li>
+                        <a class="nav-link" href="paginaprincipal.php">
+                            <!-- <i class="nc-icon nc-bell-55"></i> -->
+                            <i class="oi oi-image"></i>
+                            <p>Fotos</p>
+                        </a>
+                    </li>
+					<li>
+                        <a class="nav-link" href="paginaprincipal.php">
+                            <!-- <i class="nc-icon nc-bell-55"></i> -->
+                            <i class="oi oi-video"></i>
+                            <p>Videos</p>
                         </a>
                     </li>
 
@@ -104,9 +118,12 @@
                         </ul>
                         <!--Parte derecha del navbar-->
                         <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
+                          <li class="nav-item">
+								<a class="nav-link" href="#">
+                                    <span class="no-icon">Mi Cuenta</span>
+                                </a>
                                 <a class="nav-link" href="conexion/salir.php">
-                                    <span class="no-icon">Log out</span>
+                                    <span class="no-icon">Cerrar Sesión</span>
                                 </a>
                             </li>
                         </ul>
@@ -122,6 +139,36 @@
                 </div>
             </div>
             <!--Fin del contenedor de vistas multiples-->
+            
+            <!--Inicio del Footer-->
+            <footer class="footer">
+                <div class="container-fluid">
+                    <nav>
+                        <ul class="footer-menu">
+                            <li>
+                                <a href="#">
+                                    Contáctanos
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Quipenes Somos
+                                </a>
+                            </li>
+                           
+                        </ul>
+                        <p class="copyright text-center">
+                            ©
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script>
+                            <a href="#">Equipo ITC</a>, 70 sin ver profe
+                        </p>
+                    </nav>
+                </div>
+            </footer>
+			<!--Fin del Footer-->
+
             
         </div>
     </div><!--Fin de el contenedor global-->
