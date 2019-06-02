@@ -2,7 +2,9 @@
 require '../../conexion/conexion.php';  
 $consultar=mysqli_query($conectar,"SELECT *from users");
 
+
 ?>
+<div id="resultado"></div>
 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-12">
@@ -41,11 +43,41 @@ $consultar=mysqli_query($conectar,"SELECT *from users");
                                                 echo '<td>'.$extraido['mail'].'</td>';
                                                 echo '<td>'.$extraido['created_at'].'</td>';
                                                 echo '<td>'.$extraido['updated_at'].'</td>';
-                                                echo '<td><a class="nav-link" href="#"><i class="oi oi-pencil"></i> </a></td>';
+
                                                 echo '<td>
-                                                <form  method ="POST" action="admin/funciones/deleteUsers.php">
-                                                <button type="submit" name="no_me_quiero_ir" value="'.$extraido['id_user'].'" class="btn btn-danger"><i class="oi oi-delete"></i></button>
-                                                </form>
+                                                <button id="11'.$extraido['id_user'].'" type="submit" value="'.$extraido['id_user'].'" class="btn btn-danger"><i class="oi oi-pencil"></i></button>                        
+                        <script>
+                                $(document).ready(function(){
+                                    $("#11'.$extraido['id_user'].'").click(function(){
+
+                                        var nombre_usuario = $("#11'.$extraido['id_user'].'").val();
+
+                                        $.get("admin/views/signUpAdmin.php", {valor:nombre_usuario}, function(datos){
+                                            $("#resultado").html(datos);
+                                        });
+
+                                    });
+                                });
+                        </script>
+                                                </td>';
+                                                
+                                                echo '<td>
+                                                <button id="'.$extraido['id_user'].'" type="submit" name="no_me_quiero_ir" value="'.$extraido['id_user'].'" class="btn btn-danger"><i class="oi oi-delete"></i></button>
+                                                <script>
+                                $(document).ready(function(){
+                                    $("#'.$extraido['id_user'].'").click(function(){
+
+                                        var nombre_usuario = $("#'.$extraido['id_user'].'").val();
+
+                                        $.get("admin/funciones/deleteUsers.php", {valor:nombre_usuario}, function(datos){
+                                            $("#resultado").html(datos);
+                                        });
+
+                                    });
+                                });
+                        </script>
+                                                
+
                                                 </td>';   
                                                 echo '</tr>';
                                             }
@@ -57,5 +89,4 @@ $consultar=mysqli_query($conectar,"SELECT *from users");
                         </div>
                         
                     </div>
-
 
