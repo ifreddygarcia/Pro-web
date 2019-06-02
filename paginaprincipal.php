@@ -17,7 +17,7 @@
     <link href="fonts/open-iconic-bootstrap.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>iNube</title>
+    <title>Nube</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
@@ -44,7 +44,7 @@
                 <!--La clase logo nos crea el encabezado del sidebar donde podemos agregar un logo, texto-->
                 <div class="logo">
                     <a href="javascript:;" class="simple-text">
-                      iNube
+                      Mi Nube
                     </a>
                 </div>
                 <!--Con la clase nav creamos un menu de navegacion usando el elemento ul y li que son para listas-->

@@ -3,7 +3,6 @@
 *Agregar link nulo a un Sing up
 *Agregar link nulo de Forgot Password
 *Hacer responsive 
-*Diseño
 -->
 
 <!DOCTYPE html>
@@ -22,28 +21,29 @@
     <title>LOGIN CON SESIONES</title>
     <style type="text/css">
       /*
-            * Compatibilidad de animaciones y posición cambiante
+            * Animaciones
             */
 
             @-webkit-keyframes square {
-              /*Le aplicacamos un efecto de translado con la propiedad 
-              -webkit-transform 
-              y la propiedad "translate" hace que se mueva
-              la "Y" quiere decir que lo hará en posición vertical desde el punto 
-              0 en Y, que sería desde abajo
-              empieza en 0% porque es su progreso*/
                 0% {
                 -webkit-transform: translateY(0);
                 transform: translateY(0);
             }
-            /*al final de su progreso en el 100% llegará a la posición -100 de Y
-            y se agrega también la propiedad de rotación de 600 grados*/
             100% {
                 -webkit-transform: translateY(-100%) rotate(600deg);
                 transform: translateY(-100%) rotate(600deg);
             }
             }
-           /*Este anima otros cuantos cuadrados*/
+            @-moz-keyframes square {
+                0% {
+                -moz-transform: translateY(0);
+                transform: translateY(0);
+            }
+            100% {
+                -moz-transform: translateY(-100%) rotate(600deg);
+                transform: translateY(-100%) rotate(600deg);
+            }
+            }
             @keyframes square {
                 0% {
                 -webkit-transform: translateY(0);
@@ -59,11 +59,8 @@
 <body class="body">
   <!--div con clase contenedor que se adapte a el tamaño de una pantalla-->
     <div class="container">
-      <!-- El contenedor que tendrá las propiedades de animación-->
   <section class="example2">
-    <!--Contenedor de los cuadrados-->
             <ul class="cuadrados">
-              <!--los cuadrados-->
                 <li></li>
                 <li></li>
                 <li></li>
