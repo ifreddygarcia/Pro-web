@@ -1,4 +1,4 @@
 <?php
-	echo "Ha ocurrido un error :( ";
+	echo "Ha ocurriasdfghjkldo un error :( ";
 
 ?>
