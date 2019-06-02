@@ -1,6 +1,6 @@
 <?php
 require '../../conexion/conexion.php';  
-$consultar=mysqli_query($conectar,"SELECT *from usuarios");
+$consultar=mysqli_query($conectar,"SELECT *from users");
 
 ?>
 <div class="container-fluid">
@@ -10,7 +10,6 @@ $consultar=mysqli_query($conectar,"SELECT *from usuarios");
                                 <div class="card-header ">
                                     <h4 class="card-title">Estos son todos los usuarios disponibles</h4>
                                     <p class="card-category">Como administrador puede hacer lo que quiera</p>
-                                    <a href="javascript:irFuncion();" onclick="irFuncion();">Ejecutar función PHP</a>
                                 </div>
                                 <div class="card-body table-full-width table-responsive">
                                     <table class="table table-hover table-striped">
@@ -18,10 +17,13 @@ $consultar=mysqli_query($conectar,"SELECT *from usuarios");
                                             <th>Id</th>
                                             <th>Usuario</th>
                                             <th>Contraseña</th>
+                                            <th>Tipo de usuario</th>
                                             <th>Nombre</th>
                                             <th>Apellido</th>
+                                            <th>Edad</th>
                                             <th>Correo</th>
-                                            <th>Tipo de usuario</th>
+                                            <th>Creacion</th>
+                                            <th>Modificacion</th>
                                             <th>Editar</th>
                                             <th>Eliminar</th>
                                         </thead>
@@ -29,20 +31,18 @@ $consultar=mysqli_query($conectar,"SELECT *from usuarios");
                                     <?php 
                                         while ($extraido= mysqli_fetch_array($consultar)){
                                                 echo '<tr>';
-                                                echo '<td>'.$extraido['id'].'</td>';
-                                                echo '<td><i class="oi oi-people"></i>'.$extraido['usuario'].'</td>';
-                                                echo '<td>'.$extraido['clave'].'</td>';
-                                                echo '<td>'.$extraido['nombre'].'</td>';
-                                                echo '<td>'.$extraido['apellido'].'</td>';
-                                                echo '<td>'.$extraido['correo'].'</td>';
-                                                echo '<td>'.$extraido['tipo de usuario'].'</td>';
+                                                echo '<td>'.$extraido['id_user'].'</td>';
+                                                echo '<td><i class="oi oi-people"></i>'.$extraido['user'].'</td>';
+                                                echo '<td>'.$extraido['password'].'</td>';
+                                                echo '<td>'.$extraido['admin'].'</td>';
+                                                echo '<td>'.$extraido['name'].'</td>';
+                                                echo '<td>'.$extraido['last_name'].'</td>';
+                                                echo '<td>'.$extraido['age'].'</td>';
+                                                echo '<td>'.$extraido['mail'].'</td>';
+                                                echo '<td>'.$extraido['created_at'].'</td>';
+                                                echo '<td>'.$extraido['updated_at'].'</td>';
                                                 echo '<td><a class="nav-link" href="#"><i class="oi oi-pencil"></i> </a></td>';
-
-
-                                                echo '<td><a class="nav-link" href="#" onclick="irFuncion();"><i class="oi oi-delete"></i> </a></td>';
-
-
-                                                
+                                                echo '<td><a class="nav-link" href="#" onclick="irFuncion();"><i class="oi oi-delete"></i> </a></td>';   
                                                 echo '</tr>';
                                             }
                                     ?>    
