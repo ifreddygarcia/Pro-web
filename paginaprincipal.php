@@ -83,10 +83,6 @@
                             <i class="nc-icon nc-alien-33"></i>
                             <p>Administrar usuarios </p>
                         </a>
-                        <a class="nav-link active" href="javascript:agregarusuarios();">
-                            <i class="nc-icon nc-alien-33"></i>
-                            <p>Agregar usuarios </p>
-                        </a>
                     </li>
                 </ul><!--Fin menu de navegacion-->
             </div>

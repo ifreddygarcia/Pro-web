@@ -42,7 +42,11 @@ $consultar=mysqli_query($conectar,"SELECT *from users");
                                                 echo '<td>'.$extraido['created_at'].'</td>';
                                                 echo '<td>'.$extraido['updated_at'].'</td>';
                                                 echo '<td><a class="nav-link" href="#"><i class="oi oi-pencil"></i> </a></td>';
-                                                echo '<td><a class="nav-link" href="javascript:irFuncion();" ><i class="oi oi-delete"></i> </a></td>';   
+                                                echo '<td>
+                                                <form  method ="POST" action="admin/funciones/deleteUsers.php">
+                                                <button type="submit" name="no_me_quiero_ir" value="'.$extraido['id_user'].'" class="btn btn-danger"><i class="oi oi-delete"></i></button>
+                                                </form>
+                                                </td>';   
                                                 echo '</tr>';
                                             }
                                     ?>    
@@ -55,59 +59,3 @@ $consultar=mysqli_query($conectar,"SELECT *from users");
                     </div>
 
 
-<script>
-    function irFuncion() {
-          $(document).ready(function () {
-              $('.section').load("../../admin/views/signUpAdmin.php");
-            });
-        }
-  function irFuncion2(){
-    $.ajax({
-    // aqui va la ubicación de la página PHP
-      url: 'deleteUsers.php',
-      type: 'POST',
-      dataType: 'html',
-      data: { condicion: "ejecutarFuncion"},
-      success:function(resultado){
-       // imprime "resultado Funcion"
-       alert(resultado);
-      }
-  }
-
-    function borraruser()
-    {
-        $.ajax({
-            type:'POST', //aqui puede ser igual get
-            url: '../../admin/funciones/deleteUsers.php',//aqui va tu direccion donde esta tu funcion php
-            data: {id:1,otrovalor:'valor'},//aqui tus datos
-            success:function(data){
-                //lo que devuelve tu archivo mifuncion.php
-           },
-           error:function(data){
-            //lo que devuelve si falla tu archivo mifuncion.php
-           }
-         });
-    }
-</script>
-
-
-
-
-
-<!-- 
-<?php
-echo "<br>";
-echo '<table bgcolor="#ffffff" border="5" style="position:absolute;top:100px;left:600px;">';
-echo '<caption><h2>Tabla de casas en Hogwarts  </h2></caption>';
-echo '<tr>';
-echo '<th>usuario</th>';
-echo '<th>clave</th>';
-echo '</tr>';
-while ($extraido= mysqli_fetch_array($consultar)){
-    echo '<tr>';
-    echo '<td>'.$extraido['usuario'].'</td>';
-    echo '<td>'.$extraido['clave'].'</td>';
-    echo '</tr>';
-}
-echo '</table>';
-?> -->
