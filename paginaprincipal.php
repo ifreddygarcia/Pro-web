@@ -1,12 +1,17 @@
 <?php
+require 'conexion/conexion.php';  
         session_start();
-    //     $sesion = $_SESSION['username'];
-    //     if(!isset($sesion)){
-    //      header("location: index.php");
+        $sesion = $_SESSION['username'];
 
-    //     }else{
-    //     echo "<h1> BIENVENIDO $sesion </h1><br>";
-    // }
+        //Con esta funcion guardamos el tipo de usuario que eres si es 0 eres normal y si es 1 eres admin
+        $nombre=mysqli_query($conectar,"SELECT *FROM users where id_user >= 1");
+        while ($nom= mysqli_fetch_array($nombre)){
+            
+            if ($nom['user']== $sesion) {
+                $quesoy=$nom['admin'];
+                
+            }
+        }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,7 +48,7 @@
                 <!--La clase logo nos crea el encabezado del sidebar donde podemos agregar un logo, texto-->
                 <div class="logo">
                     <a href="javascript:;" class="simple-text">
-                      iNube
+                      INube <?php echo $sesion;   ?>
                     </a>
                 </div>
                 <!--Con la clase nav creamos un menu de navegacion usando el elemento ul y li que son para listas-->
@@ -76,13 +81,20 @@
                             <p>Videos</p>
                         </a>
                     </li>
-
-                    <li class="nav-item active active-pro">
+                    
+                    <!--Con este if si la variable que guardamos anteriormente es 1 entonses se nos mostrara la opcion de administrador -->
+                    <?php 
+                    if ($quesoy==1) {
+                        echo '<li class="nav-item active active-pro">
                         <a class="nav-link active" href="javascript:verusuarios();">
                             <i class="nc-icon nc-alien-33"></i>
                             <p>Administrar usuarios </p>
                         </a>
-                    </li>
+                    </li>';
+                    }
+
+                    ?>
+                    
                 </ul><!--Fin menu de navegacion-->
             </div>
         </div><!--Fin barra lateral-->
@@ -184,7 +196,7 @@
         }
 
 
-            
+
        
             
           </script>
