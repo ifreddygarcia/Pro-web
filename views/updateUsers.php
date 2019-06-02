@@ -12,7 +12,9 @@
 	
 	<style type="text/css">
 
-     
+     .body{
+     	  background: #9368E9;
+     }
 	.text-center {
 		color: white;
 		align: center;
@@ -20,12 +22,12 @@
 	}
 	.forma {
 		width: 340px;
-    	margin: 150px auto;
+    	margin: 10px auto;
 	}
     .forma form {
-    	margin-bottom: 15px;
+    	
         background: #9368E9;
-        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        
         padding: 30px;
     }
     .forma h2 {
@@ -49,6 +51,16 @@
 		font-size: 15px;
 		font-weight: bold;
     }
+    .dato{
+    	 width: 60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+    }
+    .colort{
+    	color: black;
+    }
 
     </style>
 
@@ -61,7 +73,7 @@
 
 </head>
 	
-<body>
+<body class="body">
 <div class="container">
 	<?php
 		include '../funciones/updateUsers.php';
@@ -69,35 +81,37 @@
 		
 	?>
 	<div class="forma">
+		<center>
 	<form action="../funciones/updateUsers.php" method="POST">
 		
 			<h2 class="text-center"> Actualizar datos: </h2>
 			<div class="form-group">
 				<label class="eti"> Nombre: </label>
-				<input type="text" class=dato name="nameUser" value="<?php echo $_SESSION['nombreUser']; ?>"><br>
+				<input type="text" class="dato" name="nameUser" value="<?php echo $_SESSION['nombreUser']; ?>"><br>
 			</div>
 			<div class="form-group">
 				<label class="eti"> Apellido: </label>
-				<input type="text" class=dato name="lastNameUser" value="<?php echo $_SESSION['apellidoUser']; ?>"><br>
+				<input type="text" class="dato" name="lastNameUser" value="<?php echo $_SESSION['apellidoUser']; ?>"><br>
 			</div>
 			<div class="form-group">
 				<label class="eti"> Edad: </label>
-				<input type="text" class=dato name="ageUser" value="<?php echo $_SESSION['edadUser']; ?>"><br>
+				<input type="text" class="dato" name="ageUser" value="<?php echo $_SESSION['edadUser']; ?>"><br>
 			</div>
 			<div class="form-group">
 				<label class="eti"> E-Mail: </label>
-				<input type="text" class=dato name="mailUser" value="<?php echo $_SESSION['correoUser']; ?>"><br>
+				<input type="text" class="dato" name="mailUser" value="<?php echo $_SESSION['correoUser']; ?>"><br>
 			</div>
 			<div class="form-group">
 				<label class="eti"> Contraseña: </label>
-				<input type="text" class=dato name="passUser" value="<?php echo $_SESSION['passUser']; ?>"><br>
+				<input type="text" class="dato" name="passUser" value="<?php echo $_SESSION['passUser']; ?>"><br>
 			</div>
 		<div class="form-group">
 			<button type="submit" class="btn btn-primary btn-block"> Actualizar </button>
 		</div>
 	</form>
 
-	<p class="text-center"><a href="#">Regresar</a></p>
+	<p class="text-center"><a href="#" class="colort">Regresar</a></p>
+</center>
 		</div>
 
 </div>

@@ -7,40 +7,57 @@
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style type="text/css">
+    	
+    	 .dato{
+    	 width: 60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+    }
+       .body{
+     	  background: #9368E9;
+     }
+    </style>
 </head>
-<body>
+<body class="body">
 	<div class="container">
+		<center>
 		<form action="../funciones/signupUsers.php" method="POST">
 			<div>
 				<h2> Ingrese sus datos: </h2>
 				<div class="form-group">
 					<label> Nombre: </label>
-					<input type="text" name="nameUser"><br>
+					<input type="text" name="nameUser" class="dato"><br>
 				</div>
 				<div class="form-group">
 					<label> Apellido: </label>
-					<input type="text" name="lastNameUser"><br>
+					<input type="text" name="lastNameUser" class="dato"><br>
 				</div>
 				<div class="form-group">
 					<label> Edad: </label>
-					<input type="text" name="ageUser"><br>
+					<input type="text" name="ageUser" class="dato"><br>
 				</div>
 				<div class="form-group">
 					<label> E-Mail: </label>
-					<input type="text" name="mailUser"><br>
+					<input type="text" name="mailUser" class="dato"><br>
 				</div>
 				<div class="form-group">
 					<label> Nobre de usuario: </label>
-					<input type="text" name="username"><br>
+					<input type="text" name="username"class="dato"><br>
 				</div>
 				<div class="form-group">
 					<label> Contraseña: </label>
-					<input type="text" name="passUser"><br>
+					<input type="text" name="passUser" class="dato"><br>
 				</div>
 				<input type="hidden" name="directoryUser">
 				<button type="submit" class="btn btn-primary"> Guardar </button>
 			</div>
 		</form>
+		<p class="text-center"><a href="#" class="colort">Regresar</a></p>
+	</center>
+		</div>
 	</div>
 <!-- Scripts que trabajan con bootstrap para hacer la página responsive-->		
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
