@@ -1,7 +1,9 @@
 <!--Documento hecho por freddy -->
+<!--En este documento esla plantilal que nos muestra los label donde insertaremos los datos de que editamos del usuario -->
 <?php 
 require '../../conexion/conexion.php';  
 
+//recoguemos el del usuario que vamos a editar
 if (isset($_GET['valor'])) {
     $quien=$_GET['valor'];
 }
@@ -14,7 +16,7 @@ if (isset($_GET['valor'])) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Registro admin</title>
+    <title></title>
     <meta charset="utf-8">
     <link type="text/css" href="./../css/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -60,10 +62,13 @@ if (isset($_GET['valor'])) {
         </center>
     </div>
 
+<!--con este escritp de jquery recogemos los vamores ingresados cuando se preciona el boton y los envia al php que los inserta y nos devuelve 
+el resultado sin la necesidad de salir de la ventada -->
      <script>
                                 $(document).ready(function(){
                                     $("#boton4").click(function(){
 
+                                        //<!-- recoguemos los datos y lo guardamos en variables -->
                                         var variable = $("#boton4").val();
                                         var variable1 = $("#usu").val();
                                         var variable2 = $("#con").val();
@@ -73,6 +78,7 @@ if (isset($_GET['valor'])) {
                                         var variable6 = $("#eda").val();
                                         var variable7 = $("#cor").val();
 
+                                        //<!-- aqui enviamos las variables-->
                                         $.get("admin/funciones/signUpAdmin.php", {valboton:variable, usuario:variable1, contra:variable2, tipo:variable3, nombre:variable4, apelli:variable5, edad:variable6, correo:variable7 }, function(datos){
                                             $("#resultado").html(datos);
                                         });
