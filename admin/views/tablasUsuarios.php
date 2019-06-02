@@ -42,7 +42,7 @@ $consultar=mysqli_query($conectar,"SELECT *from users");
                                                 echo '<td>'.$extraido['created_at'].'</td>';
                                                 echo '<td>'.$extraido['updated_at'].'</td>';
                                                 echo '<td><a class="nav-link" href="#"><i class="oi oi-pencil"></i> </a></td>';
-                                                echo '<td><a class="nav-link" href="#" onclick="irFuncion();"><i class="oi oi-delete"></i> </a></td>';   
+                                                echo '<td><a class="nav-link" href="javascript:irFuncion();" ><i class="oi oi-delete"></i> </a></td>';   
                                                 echo '</tr>';
                                             }
                                     ?>    
@@ -53,11 +53,15 @@ $consultar=mysqli_query($conectar,"SELECT *from users");
                         </div>
                         
                     </div>
-                </div>
 
 
 <script>
-  function irFuncion(){
+    function irFuncion() {
+          $(document).ready(function () {
+              $('.section').load("../../admin/views/signUpAdmin.php");
+            });
+        }
+  function irFuncion2(){
     $.ajax({
     // aqui va la ubicación de la página PHP
       url: 'deleteUsers.php',

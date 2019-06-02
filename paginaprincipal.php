@@ -140,6 +140,8 @@
               $('.section').load("admin/views/signUpAdmin.php");
             });
         }
+
+       
             
           </script>
 <!--Todos estos script son muy utiles ayudan a que la pagina sea responsiva-->
