@@ -1,44 +1,62 @@
+/*Texto que dice Ingresar */
 .login{
+    /*fuente*/
 	font-family: 'Monospace', sans-serif;
 
 }
-
+/*imagen principal*/
 .nube{
+    /*ancho y largo*/
 	width: 250px;
 	height: 150px;
 }
-
+/*cuerpo de la página*/
 .body{
+    /*color de fondo*/
 	background:blue;
 	  
 }
-
+/*Seccion que contiene los li, los li son los cuadros que flotan*/
  .example2 {
+    /*color de fondo*/
                 background: #08B;
+                /*compatibilidad y gradiante general*/
                 background: -webkit-linear-gradient(180deg, #0BF 0%, #056 100%);
                 background: -moz-linear-gradient(180deg, #0BF 0%, #056 100%);
                 background: linear-gradient(180deg, #0BF 0%, #056 100%);
+                /*alto y ancho*/
                 width: 100%;
                 height: 100%;
                
             }
-
+/*Con que leas los primeros te ayuda a entender todos los demas "cuadrados"*/
             .cuadrados {
+                /*Posiciom donde se ubican las animaciones, debe ser en el fondo
+                porque sino se sobrepondría encima de nuestros cuadros de texto 
+                y nos bloquearía su uso*/
                 position: bottom;
+                /*lugar donde se ubica el contenedor de los cuadrados*/
                 top: 0;
                 left: 0;
+                 /*Ancho y largo*/
                 width: 100%;
                 height: 100%;
                 z-index: 1;
             }
             .cuadrados li {
+                /*posición absoluta, es decir en el fondo y donde lo ubiquemos con las 
+                coordenadas de abajo*/
                 position: absolute;
                 list-style: none;
                 display: block;
+                /*Ancho y largo*/
                 width: 40px;
                 height: 40px;
+                /*color de fondo con codigo rgba*/
                 background-color: rgba(255, 255, 255, 0.15);
+                /*posición de donde se ubican los cuadritos al salir*/
                 bottom: -160px;
+                /*velocidad de animación con compatibilidad de navegadores*/
                 -webkit-animation: square 25s infinite linear;
                 -moz-animation: square 25s infinite linear;
                 animation: square 25s infinite linear;
@@ -243,57 +261,47 @@
                 animation-duration: 10s;
                 background-color: rgba(255, 255, 255, 0.25);
             }
-.bg-bubbles li:nth-child(3) {
-  left: 25%;
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
-}
-.bg-bubbles li:nth-child(7) {
-  left: 32%;
-  width: 160px;
-  height: 160px;
-  -webkit-animation-delay: 7s;
-          animation-delay: 7s;
-}
-.bg-bubbles li:nth-child(16) {
-  left: 75%;
-  width: 20px;
-  height: 20px;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  -webkit-animation-duration: 25s;
-          animation-duration: 25s;
-  background-color: rgba(255, 255, 255, 0.3);
-}
+
+/*Diseño de los cuadros input usuario y password así que los comentarios aplican para ambos*/
 .usuario{
+    /*ancho*/
  width: 20%;
+ /*bordes imaginarios*/
   padding: 12px 20px;
+  /*grosor del margen*/
   margin: 8px 0;
-  display: inline-block;
+  /*tipo de borde y grosor*/
   border: 1px solid #ccc;
+  /*radio del borde, las pequeñas curbas que tiene en la esquina*/
   border-radius: 4px;
-  box-sizing: border-box;
+ 
 }
 .password{
  width: 20%;
   padding: 12px 20px;
   margin: 8px 0;
-  display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-sizing: border-box;
+ 
 }
-
+/*Diseño del boton de enviar datos*/
 .enter{
+    /*ancho*/
 	  width: 20%;
+      /*color de fondo*/
   background-color: #08088A;
+  /*color de fuente*/
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
+  /*quita el borde grueso*/
   border: none;
+  /*aplica un borde circular */
   border-radius: 4px;
-  cursor: pointer;
+
 }
+/*lo que sucede cuando pasamos el cursor encima del boton enter por la propiedad "hover"*/
 .enter:hover {
+    /*en este caso solo modificamos el color*/
   background-color: #0B0B3B;
 }
