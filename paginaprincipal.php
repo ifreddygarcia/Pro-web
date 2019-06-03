@@ -10,6 +10,8 @@ require 'conexion/conexion.php';
             if ($nom['user']== $sesion) {
                 $quesoy=$nom['admin'];
                 
+            }else{
+
             }
         }
 ?>
@@ -17,6 +19,12 @@ require 'conexion/conexion.php';
 <html lang="en">
 
 <head>
+<!--favicon-->
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="Images/favicon.ico" type="image/x-icon">
+
+
+<!--Bootstrap del navbar y sidebar-->
     <meta charset="utf-8" />
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
     <link href="fonts/open-iconic-bootstrap.css" rel="stylesheet">
@@ -48,7 +56,7 @@ require 'conexion/conexion.php';
                 <!--La clase logo nos crea el encabezado del sidebar donde podemos agregar un logo, texto-->
                 <div class="logo">
                     <a href="javascript:;" class="simple-text">
-                      INube <?php echo $sesion;   ?>
+                      Sesión <?php echo $sesion;   ?>
                     </a>
                 </div>
                 <!--Con la clase nav creamos un menu de navegacion usando el elemento ul y li que son para listas-->
@@ -103,7 +111,7 @@ require 'conexion/conexion.php';
             <!-- Navbar inicia-->
             <nav class="navbar navbar-expand-lg " color-on-scroll="500">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#pablo">Template</a>
+                    <a class="navbar-brand" >Mi nube</a>
                     <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar burger-lines"></span>
                         <span class="navbar-toggler-bar burger-lines"></span>
