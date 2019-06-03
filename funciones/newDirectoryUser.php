@@ -21,6 +21,18 @@
 				//Creación de directorio en /data/users/nombre_de_usuario
 				$createDir = mkdir($fullRoute,0777, true);
 				if ($createDir) {
+					//Subdirectorios
+					$subDirMusic = $fullRoute.'/music';
+					$subDirPhotos = $fullRoute.'/photos';
+					$subDirVideos = $fullRoute.'/videos';
+					$subDirFiles = $fullRoute.'/files';
+					//Creación de subdirectorios
+					$createSudDirMusic = mkdir($subDirMusic,0777,true);
+					$createSudDirPhotos = mkdir($subDirPhotos,0777,true);
+					$createSudDirVideos = mkdir($subDirVideos,0777,true);
+					$createSudDirFiles = mkdir($subDirFiles,0777,true);
+
+
 					echo "El directorio fue creado correctamente!";
 					echo "</br>";
 				}else{
