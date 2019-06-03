@@ -54,6 +54,11 @@
                 transform: translateY(-1500px) rotate(600deg);
             }
             }
+           /*los links del fondo*/
+.colort{
+    /*Solo que tengan color negro*/
+    color: black;
+}
     </style>
 </head>
 <body class="body">
@@ -96,16 +101,16 @@
        <form action="conexion/loguear.php" method="POST">
         <input type="text" name="usuario" placeholder="Digite su usuario" class="usuario">
          <br><br>
-         <input type="password" name="clave" placeholder="digite clave" class="password">
+         <input type="password" name="clave" placeholder="Digite clave" class="password">
          <br><br>
          <button type="submit" class="enter"> ENTRAR</button>
 		 <br>
         </form>
 		<br>
 <!-- link a página de Sing up -->
-		 <a href="views/signupUsers.html">Sign up</a><br>
+		 <a href="views/signupUsers.html" class="colort">Sign up</a><br>
 <!-- Link a Forgot Password-->
-		 <a href="views/recoverPass.php">¿Olvidaste tu contraseña?</a>
+		 <a href="views/recoverPass.php" class="colort">¿Olvidaste tu contraseña?</a>
         </center>
 </body>
 </div>

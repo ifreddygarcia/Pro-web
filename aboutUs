@@ -32,7 +32,7 @@ font-family: 'Montserrat', sans-serif;
 	</title>
 </head>
 <body class="body">
-	<h1 class="Nombre"> About Us<h3><a href="index.php" class="Volver">Volver</a></h3></h1>
+	<h1 class="Nombre"> About Us<h3><a href="paginaprincipal.php" class="Volver">Volver</a></h3></h1>
 
 <div class="container">
 	<div class="Nombre">
@@ -65,6 +65,7 @@ font-family: 'Montserrat', sans-serif;
 "Épico y sin igual" <br>
 -Revista Time</p>
 </div>
+<h3><a href="paginaprincipal.php" class="Volver">Volver</a></h3>
 
 </body>
 <!-- Scripts que trabajan con bootstrap para hacer la página responsive-->		

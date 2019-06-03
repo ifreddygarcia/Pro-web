@@ -126,7 +126,7 @@ require 'conexion/conexion.php';
                         <!--Parte derecha del navbar-->
                         <ul class="navbar-nav ml-auto">
                           <li class="nav-item">
-								<a class="nav-link" href="#">
+								<a class="nav-link" href="views/updateUsers.php">
                                     <span class="no-icon">Mi Cuenta</span>
                                 </a>
                                 <a class="nav-link" href="conexion/salir.php">
@@ -158,7 +158,7 @@ require 'conexion/conexion.php';
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="aboutUs">
                                     Quiénes Somos
                                 </a>
                             </li>
@@ -169,7 +169,7 @@ require 'conexion/conexion.php';
                             <script>
                                 document.write(new Date().getFullYear())
                             </script>
-                            <a href="#">Equipo ITC</a>, 70 sin ver profe
+                            <a >Equipo ITC</a>, 70 sin ver profe
                         </p>
                     </nav>
                 </div>

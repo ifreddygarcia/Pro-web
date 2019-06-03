@@ -110,7 +110,7 @@
 		</div>
 	</form>
 
-	<p class="text-center"><a href="#" class="colort">Regresar</a></p>
+	<p class="text-center"><a href="../paginaprincipal.php" class="colort">Regresar</a></p>
 </center>
 		</div>
 

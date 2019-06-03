@@ -45,18 +45,18 @@
 <form action="" class="form" method="POST">
 	<h2 class="text-center"> Reestablecer contraseña </h2>
 			<div class="form-group">
-				<label class="eti"> Contraseña nueva </label>
-				<input type="text" class="dato" name="nameUser" value=""><br>
+				<label class="eti"> Contraseña nueva </label><br>
+				<input type="password" class="dato" name="nameUser" value=""><br>
 			</div>
 			<div class="form-group">
-				<label class="eti"> Repetir </label>
-				<input type="text" class="dato" name="lastNameUser" value=""><br>
+				<label class="eti"> Repetir </label><br>
+				<input type="password" class="dato" name="lastNameUser" value=""><br>
 			</div>
 			
 		<div class="form-group">
 			<button type="submit" class="boton"> Reestablecer </button>
 		</div>
-		<p class="text-center"><a href="#" class="colort">Regresar</a></p>
+		<p class="text-center"><a href="../index.php" class="colort">Regresar</a></p>
 	
 </form>
 </center>

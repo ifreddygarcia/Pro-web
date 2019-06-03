@@ -4,6 +4,11 @@
 	font-family: 'Monospace', sans-serif;
 
 }
+/*Elimina cualquier posible desplazamiento*/
+.body:-webkit-scrollbar {
+
+    display: none;
+}
 /*imagen principal*/
 .nube{
     /*ancho y largo*/
@@ -14,6 +19,8 @@
 .body{
     /*color de fondo*/
 	background:blue;
+    /*Elimina la barras de desplazamiento*/
+    overflow: hidden;
 	  
 }
 /*Seccion que contiene los li, los li son los cuadros que flotan*/
@@ -305,3 +312,4 @@
     /*en este caso solo modificamos el color*/
   background-color: #0B0B3B;
 }
+

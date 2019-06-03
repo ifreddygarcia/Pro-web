@@ -48,15 +48,9 @@
 				</div>
 				<div class="form-group">
 					<label class="lab"> E-Mail: </label><br>
-					<input type="text" name="mailUser" class="dato"><br>
-					<select name="mailUser" class="dato">
-
-					<option>@gmail.com</option>
-					<option>@hotmail.com</option>
-					<option>@outlook.com</option>
-					<option>@yahoo.com.mx</option>
-
-					</select>
+			
+					<input type="email" name="mailUser" class="dato" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br>
+					
 				</div>
 				<div class="form-group">
 					<label class="lab"> Nombre de usuario: </label><br>
@@ -78,14 +72,14 @@
             // input is valid -- reset the error message
             input.setCustomValidity('');
         }
-        
+
     						}
 			</script>
 				<input type="hidden" name="directoryUser">
 				<button type="submit" class="btn btn-primary" name="enviar"> Guardar </button>
 			</div>
 		</form>
-		<p class="text-center"><a href="#" class="colort">Regresar</a></p>
+		<p class="text"><a href="../index.php" class="colort">Regresar</a></p>
 	
 		</div>
 	</div>
