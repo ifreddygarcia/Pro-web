@@ -101,7 +101,7 @@
        <form action="conexion/loguear.php" method="POST">
         <input type="text" name="usuario" placeholder="Digite su usuario" class="usuario">
          <br><br>
-         <input type="password" name="clave" placeholder="Digite clave" class="password">
+         <input type="password" name="clave" placeholder="Digite clave" class="password" maxlength="8">
          <br><br>
          <button type="submit" class="enter"> ENTRAR</button>
 		 <br>

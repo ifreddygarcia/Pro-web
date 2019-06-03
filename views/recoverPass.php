@@ -46,11 +46,11 @@
 	<h2 class="text-center"> Reestablecer contraseña </h2>
 			<div class="form-group">
 				<label class="eti"> Contraseña nueva </label><br>
-				<input type="password" class="dato" name="nameUser" value=""><br>
+				<input type="password" class="dato" name="nameUser" value="" maxlength="8"><br>
 			</div>
 			<div class="form-group">
 				<label class="eti"> Repetir </label><br>
-				<input type="password" class="dato" name="lastNameUser" value=""><br>
+				<input type="password" class="dato" name="lastNameUser" value="" maxlength="8"><br>
 			</div>
 			
 		<div class="form-group">

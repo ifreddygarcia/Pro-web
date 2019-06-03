@@ -57,7 +57,7 @@
             <input type="text" class="form-control" placeholder="Usuario" required="required">
         </div>
         <div class="form-group">
-            <input type="Password" class="form-control" placeholder="Contraseña" required="required">
+            <input type="Password" class="form-control" placeholder="Contraseña" required="required" maxlength="8">
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-primary btn-block">Acceder</button>
