@@ -17,14 +17,16 @@ require '../conexion/conexion.php';
                 $su=$nom['id_user'];
             }
         }
-
-$qrh=mysqli_query($conectar,"SELECT *FROM cloud where id_user_user = '$su' " );
-
-                                                    
+            $qrh=mysqli_query($conectar,"SELECT *FROM cloud where id_user_user = '$su' " );                       
 
 
 ?>
-
+<form action="funciones/subirfile.php" method="post" enctype="multipart/form-data">
+<div class="container-fluid">
+    <input name="archivo" type="file"   >
+    <input type="submit" value="Enviar" name="env"   >
+</div>
+</form>
 
 <div class="content">
                 <div class="container-fluid">
@@ -41,16 +43,18 @@ $qrh=mysqli_query($conectar,"SELECT *FROM cloud where id_user_user = '$su' " );
                                             <th>fecha</th>
                                         </thead>
                                         <tbody>
-                                            <tr>
+                                            
                                             <?php 
                                             while ($arr= mysqli_fetch_array($qrh) )               //obtenemos un archivo y luego otro sucesivamente
                                                 {
-                                                    echo "<td><a href='".$arr['route']."'>".$arr['route']."</a</td>";
-                                                     echo "<td>".$arr['created_at']."</td>";
+                                                    echo '<tr>';
+                                                    echo '<td><a href="'.$arr['route'].'">'.$arr['route'].'</a></td>';
+                                                     echo '<td>'.$arr['created_at'].'</td>';
+                                                     echo '</tr>';
                                                 }   
                                             ?>
                                                 
-                                            </tr>
+                                            
                                         </tbody>
                                     </table>
                                 </div>
@@ -59,3 +63,19 @@ $qrh=mysqli_query($conectar,"SELECT *FROM cloud where id_user_user = '$su' " );
                     </div>
                 </div>
             </div>   
+
+<!-- <script>
+                                $(document).ready(function(){
+                                    $("#sub").click(function(){
+
+                                        var variable = $("#boton4").val();
+                                        var variable1 = $("#usu").val();
+                                        var variable2 = $("#con").val();
+
+                                        $.get("funciones/subirfile.php", {valboton:variable, usuario:variable1, contra:variable2 }, function(datos){
+                                            $("#resultado").html(datos);
+                                        });
+
+                                    });
+                                });
+</script> -->
