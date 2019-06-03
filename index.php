@@ -9,6 +9,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!--Favicon-->
+  <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="Images/favicon.ico" type="image/x-icon">
   <!--Css index.css-->
   <link rel="stylesheet"  href="Css/index.css">
   <!--Fuente montserrat-->
