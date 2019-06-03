@@ -104,6 +104,7 @@
 			<div class="form-group">
 				<label class="eti"> Contraseña: </label><br>
 				<input type="password" class="dato" name="passUser" value="<?php echo $_SESSION['passUser']; ?>" maxlength="8" id="password_confirm"><br>
+				<input type="checkbox" onclick="verPass()">Mostrar contraseña
 			</div>
 			<div class="form-group">
 				<label class="eti"> Confirma Contraseña: </label><br>
@@ -121,6 +122,14 @@
 		            input.setCustomValidity('');
 		        }
 	    	}
+	    	function verPass() {
+				var x = document.getElementById("password_confirm");
+					if (x.type === "password") {
+						x.type = "text";
+				  	}else{
+				    	x.type = "password";
+				  	}
+				}
 		</script>
 	</form>
 

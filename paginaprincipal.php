@@ -28,17 +28,15 @@ echo'<script type="text/javascript">
 <head>
 <!--favicon-->
     <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
-<link rel="icon" href="Images/favicon.ico" type="image/x-icon">
 
 
-<!--Bootstrap del navbar y sidebar-->
-    <meta charset="utf-8" />
+    <!--iconos del sidebar-->
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
     <link href="fonts/open-iconic-bootstrap.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    
+    
     <title>iNube</title>
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
@@ -53,7 +51,7 @@ echo'<script type="text/javascript">
     <!-- Este es el contenedor que tiene nuesto navbar y sidebar-->
     <div class="wrapper">
         <!--Aqui empiesa la barra lateral -->
-        <div class="sidebar" data-image="../assets/img/sidebar-5.jpg">
+        <div class="sidebar" >
     <!--
         Tip 1: Puedes cambiar el color de la barra lateral usando: data-color="purple | blue | green | orange | red"
         Tip 2: También puedes agregar una imagen usando la etiqueta data-image.
@@ -158,7 +156,7 @@ echo'<script type="text/javascript">
                     <nav>
                         <ul class="footer-menu">
                             <li>
-                                <a href="#">
+                                <a href="contactUs">
                                     Contáctanos
                                 </a>
                             </li>

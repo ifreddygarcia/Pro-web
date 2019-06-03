@@ -105,9 +105,10 @@
         <input type="text" name="usuario" placeholder="Digite su usuario" class="usuario" required="required">
          <br><br>
 
-         <input type="password" name="clave" placeholder="Digite clave" class="password" maxlength="8" required="required" >
+         <input type="password" name="clave" placeholder="Digite clave" class="password" maxlength="8" required="required" id="password">
 
          <br><br>
+         <input type="checkbox" onclick="verPass()">Mostrar contraseña<br>
          <button type="submit" class="enter"> ENTRAR</button>
 		 <br>
         </form>
@@ -122,5 +123,14 @@
 <!-- Scripts que trabajan con bootstrap para hacer la página responsive-->		
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>		
-
+<script type="text/javascript">
+  function verPass() {
+        var x = document.getElementById("password");
+          if (x.type === "password") {
+            x.type = "text";
+            }else{
+              x.type = "password";
+            }
+        }
+</script>
 </html>
