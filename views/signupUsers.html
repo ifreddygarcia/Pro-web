@@ -19,44 +19,74 @@
        .body{
      	  background: #9368E9;
      }
+     .colort{
+     	color: black;
+     }
+     .lab{
+     	position: right;
+     }
+    
     </style>
 </head>
 <body class="body">
 	<div class="container">
-		<center>
+		
 		<form action="../funciones/signupUsers.php" method="POST">
 			<div>
 				<h2> Ingrese sus datos: </h2>
 				<div class="form-group">
-					<label> Nombre: </label>
+					<label class="lab"> Nombre: </label><br>
 					<input type="text" name="nameUser" class="dato"><br>
 				</div>
 				<div class="form-group">
-					<label> Apellido: </label>
+					<label class="lab"> Apellido: </label><br>
 					<input type="text" name="lastNameUser" class="dato"><br>
 				</div>
 				<div class="form-group">
-					<label> Edad: </label>
+					<label class="lab"> Edad: </label><br>
 					<input type="text" name="ageUser" class="dato"><br>
 				</div>
 				<div class="form-group">
-					<label> E-Mail: </label>
+					<label class="lab"> E-Mail: </label><br>
 					<input type="text" name="mailUser" class="dato"><br>
+					<select name="mailUser" class="dato">
+
+					<option>@gmail.com</option>
+					<option>@hotmail.com</option>
+					<option>@outlook.com</option>
+					<option>@yahoo.com.mx</option>
+
+					</select>
 				</div>
 				<div class="form-group">
-					<label> Nobre de usuario: </label>
+					<label class="lab"> Nombre de usuario: </label><br>
 					<input type="text" name="username" class="dato"><br>
 				</div>
 				<div class="form-group">
-					<label> Contraseña: </label>
-					<input type="text" name="passUser" class="dato"><br>
-				</div>
+					<label class="lab"> Contraseña: </label><br>
+				<input class="dato" name="passUser" required="required" type="password" id="password" />
+			</div>
+			<div class="form-group">
+				<label class="lab"> Confirma Contraseña: </label><br>
+				<input class="dato" name="password_confirm" required="required" type="password" id="password_confirm" oninput="check(this)" />
+			</div>
+				<script language='javascript' type='text/javascript'>
+    	function check(input) {
+        if (input.value != document.getElementById('password').value) {
+            input.setCustomValidity('Password Must be Matching.');
+        } else {
+            // input is valid -- reset the error message
+            input.setCustomValidity('');
+        }
+        
+    						}
+			</script>
 				<input type="hidden" name="directoryUser">
 				<button type="submit" class="btn btn-primary" name="enviar"> Guardar </button>
 			</div>
 		</form>
 		<p class="text-center"><a href="#" class="colort">Regresar</a></p>
-	</center>
+	
 		</div>
 	</div>
 <!-- Scripts que trabajan con bootstrap para hacer la página responsive-->		
