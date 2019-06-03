@@ -86,23 +86,23 @@
 		
 			<h2 class="text-center"> Actualizar datos: </h2>
 			<div class="form-group">
-				<label class="eti"> Nombre: </label>
+				<label class="eti"> Nombre: </label><br>
 				<input type="text" class="dato" name="nameUser" value="<?php echo $_SESSION['nombreUser']; ?>"><br>
 			</div>
 			<div class="form-group">
-				<label class="eti"> Apellido: </label>
+				<label class="eti"> Apellido: </label><br>
 				<input type="text" class="dato" name="lastNameUser" value="<?php echo $_SESSION['apellidoUser']; ?>"><br>
 			</div>
 			<div class="form-group">
-				<label class="eti"> Edad: </label>
+				<label class="eti"> Edad: </label><br>
 				<input type="text" class="dato" name="ageUser" value="<?php echo $_SESSION['edadUser']; ?>"><br>
 			</div>
 			<div class="form-group">
-				<label class="eti"> E-Mail: </label>
+				<label class="eti"> E-Mail: </label><br>
 				<input type="text" class="dato" name="mailUser" value="<?php echo $_SESSION['correoUser']; ?>"><br>
 			</div>
 			<div class="form-group">
-				<label class="eti"> Contraseña: </label>
+				<label class="eti"> Contraseña: </label><br>
 				<input type="text" class="dato" name="passUser" value="<?php echo $_SESSION['passUser']; ?>"><br>
 			</div>
 		<div class="form-group">
