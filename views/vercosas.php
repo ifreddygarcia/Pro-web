@@ -17,7 +17,28 @@ require '../conexion/conexion.php';
                 $su=$nom['id_user'];
             }
         }
-            $qrh=mysqli_query($conectar,"SELECT *FROM cloud where id_user_user = '$su' " );                       
+            $qrh=mysqli_query($conectar,"SELECT *FROM cloud where id_user_user = '$su' " );     
+
+             while ($arreidcloud= mysqli_fetch_array($qrh) )               //obtenemos un archivo y luego otro sucesivamente
+                             {
+                                 $idclo=$arreidcloud['id_cloud']; 
+                                 $ruta=$arreidcloud['route'];            
+                            }   
+
+
+            $sql=mysqli_query($conectar,"SELECT *FROM directories where id_cloud_cloud = '$idclo' " );
+            while ($arreidcloud2= mysqli_fetch_array($sql) )               //obtenemos un archivo y luego otro sucesivamente
+                             {
+                                if ($arreidcloud2['route_file'] == "/files/") {
+                                    $ruta2nivel=$ruta.$arreidcloud2['route_file']; 
+                                    $iddirectorio=$arreidcloud2['id_directories']; 
+                                }
+                                           
+                            }  
+                            echo "$ruta2nivel";
+
+
+            $sql23=mysqli_query($conectar,"SELECT *FROM files where id_direct_direct = '$iddirectorio' " );
 
 
 ?>
@@ -45,11 +66,11 @@ require '../conexion/conexion.php';
                                         <tbody>
                                             
                                             <?php 
-                                            while ($arr= mysqli_fetch_array($qrh) )               //obtenemos un archivo y luego otro sucesivamente
+                                            while ($arr= mysqli_fetch_array($sql23) )               //obtenemos un archivo y luego otro sucesivamente
                                                 {
                                                     echo '<tr>';
-                                                    echo '<td><a href="'.$arr['route'].'">'.$arr['route'].'</a></td>';
-                                                     echo '<td>'.$arr['created_at'].'</td>';
+                                                    echo '<td><a href="'.$ruta2nivel.$arr['file_name'].'">'.$arr['file_name'].'</a></td>';
+                                                     echo '<td>'.$arr['uploaded_at'].'</td>';
                                                      echo '</tr>';
                                                 }   
                                             ?>
