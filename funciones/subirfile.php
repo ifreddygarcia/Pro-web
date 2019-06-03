@@ -45,6 +45,15 @@ require '../conexion/conexion.php';
 
             if(move_uploaded_file($_FILES['archivo']['tmp_name'], $target_path)) { 
                 echo "El archivo ". basename( $_FILES['archivo']['name']). " ha sido enviado";
+                //Obtener el tamaño en Megabytes
+                $kbSize = filesize($target_path);
+
+                function kbToMb($kbSize){
+                    $kbMb = ($kbSize  /  1024 ) /1024;
+                    substr($kbMb,0,5);
+                    echo "El tamaño es: ".substr($kbMb,0,5);
+                };
+                kbToMb($kbSize);
             } else{
                 echo "Ha ocurrido un error, trate de nuevo!";
             }
