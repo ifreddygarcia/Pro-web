@@ -5,8 +5,9 @@ proyecto, no se visualiza-->
 <?php
 	//Referencia al archivo para crear conexión
 	require '../conexion/conexion.php';
-	//Referencia al archivo para crear directorios
-	require '../funciones/newDirectoryUser.php';
+	//Referencia a crear registro en cloud
+	require '../funciones/newCloudUser.php';
+	//--------------------------------------------------------
 	//Variables recibidas por POST
 	$nameUser= $_POST["nameUser"];
 	$lastNameUser= $_POST["lastNameUser"];
@@ -14,25 +15,22 @@ proyecto, no se visualiza-->
 	$mailUser= $_POST["mailUser"];
 	$username= $_POST["username"];
 	$passUser= $_POST["passUser"];
-	//Query qu inserta a los usuarios nuevos
-
 	//Prueba de que el username no se repita
 	$buscarUsuario = "SELECT * FROM users
+	WHERE user = '$username' OR mail = '$mailUser' ";
 
- WHERE user = '$username' OR mail = '$mailUser' ";
-
- $result = $conectar->query($buscarUsuario);
+ 	$result = $conectar->query($buscarUsuario);
  
- $count = mysqli_num_rows($result);
+ 	$count = mysqli_num_rows($result);
  
- if ($count == 1) {
-
-echo'<script type="text/javascript">
-    alert("El nombre de usuario o correo electronico ya existe");
-    window.location.href="../views/signupUsers.html";
-    </script>';
- }
-else{
+ 	if ($count == 1) {
+		echo'<script type="text/javascript">
+    			alert("El nombre de usuario o correo electronico ya existe");
+    			window.location.href="../views/signupUsers.html";
+    		</script>';
+ 	}else{
+ 		
+	//Query que inserta a los usuarios nuevos
 	$insertQuery = "INSERT INTO users(user,password,admin,name,last_name,age,mail) VALUES ('$username', '$passUser', 0, '$nameUser', '$lastNameUser', '$ageUser', '$mailUser')";
 	
 	//Validación de Sentencia creada correctamente
@@ -41,6 +39,8 @@ else{
 	    echo "<br>";
 	    //Llamada a función para crear directorio
 		createUserDir();
+		//Crear sus espacio en la nube
+		insertCloud($idUserCloud,$cloudRoute,$conectar);
 	} else {
     echo "Error: " . $insertQuery . "<br>" . $conectar->error;
 }

@@ -4,7 +4,7 @@
 	//Referencia al archivo para crear conexión
 	require '../conexion/conexion.php';
 	//Variable que almacena el nombre de usuario para su carpeta principal
-	$dirName = $_POST['username'];
+	$dirName = isset($_POST['username']);
 	//Ruta absoluta donde estarán los usuarios
 	$dirUsers = '../data/users/';
 
@@ -47,5 +47,5 @@
 			echo "No pudimos crear el directorio :( ";
 			echo "</br>";
 		}
-	}
+	};
 ?>
