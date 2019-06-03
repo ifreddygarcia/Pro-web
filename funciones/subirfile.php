@@ -39,21 +39,23 @@ require '../conexion/conexion.php';
                 $archivoname= basename($_FILES['archivo']['name']);
                 $archivoname2="data/users/$nsu/files/".$archivoname;
 
-        if(mysqli_query($conectar,"INSERT INTO files (id_direct_direct,file_name,file_type) values ('$iddirectorio', '$archivoname', '')")){
+        if(mysqli_query($conectar,"INSERT INTO files (id_direct_direct,file_name) values ('$iddirectorio', '$archivoname')")){
                 $target_path = "../".$ruta2nivel;
                 $target_path = $target_path . basename( $_FILES['archivo']['name']); 
+                
 
             if(move_uploaded_file($_FILES['archivo']['tmp_name'], $target_path)) { 
                 echo "El archivo ". basename( $_FILES['archivo']['name']). " ha sido enviado";
                 //Obtener el tamaño en Megabytes
                 $kbSize = filesize($target_path);
 
-                function kbToMb($kbSize){
+                
                     $kbMb = ($kbSize  /  1024 ) /1024;
                     substr($kbMb,0,5);
-                    echo "El tamaño es: ".substr($kbMb,0,5);
-                };
-                kbToMb($kbSize);
+                    echo " El tamaño es: ".substr($kbMb,0,5);
+                
+                mysqli_query($conectar,"UPDATE files SET file_size ='$kbMb' where file_name ='$archivoname'");
+
             } else{
                 echo "Ha ocurrido un error, trate de nuevo!";
             }
