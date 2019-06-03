@@ -107,15 +107,16 @@ require '../conexion/conexion.php';
                                                                 </td>';
                                                          echo '<td>'.$arr['uploaded_at'].'</td>';
                                                          echo '<td>'.$arr['file_size'].' MB</td>';
-                                                         echo '<td>
-                                                            <button id="11'.$arr['id_file'].'" type="submit" value="'.$arr['id_file'].'" class="btn btn-danger"><i class="oi oi-delete"></i></button>                        
+                                                         echo '<td><input type="hidden"  id="22'.$arr['id_file'].'" value="'.$ruta2nivel.'">
+                                                            <button id="11'.$arr['id_file'].'" type="submit" value="'.$arr['id_file'].'" class="btn btn-danger"><i  class="oi oi-delete"></i></button>                     
                         <script>
                                 $(document).ready(function(){
                                     $("#11'.$arr['id_file'].'").click(function(){
 
                                         var idfile = $("#11'.$arr['id_file'].'").val();
+                                        var eli =    $("#22'.$arr['id_file'].'").val();
 
-                                        $.get("funciones/deleteCosas.php", {valor:idfile}, function(datos){
+                                        $.get("funciones/deleteCosas.php", {valor:idfile, elimi:eli}, function(datos){
                                             $("#resultado").html(datos);
                                         });
 
