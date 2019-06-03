@@ -156,7 +156,7 @@ echo'<script type="text/javascript">
                     <nav>
                         <ul class="footer-menu">
                             <li>
-                                <a href="#">
+                                <a href="contactUs">
                                     Contáctanos
                                 </a>
                             </li>
