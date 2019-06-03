@@ -102,9 +102,9 @@
        <br>
 <!--Hacer que el formulario agarre datos de loguear.php-->
        <form action="conexion/loguear.php" method="POST">
-        <input type="text" name="usuario" placeholder="Digite su usuario" class="usuario">
+        <input type="text" name="usuario" placeholder="Digite su usuario" class="usuario" required="required">
          <br><br>
-         <input type="password" name="clave" placeholder="Digite clave" class="password">
+         <input type="password" name="clave" placeholder="Digite clave" class="password" required="required">
          <br><br>
          <button type="submit" class="enter"> ENTRAR</button>
 		 <br>

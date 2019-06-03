@@ -1,5 +1,35 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+      .send{
+        width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #9368E9;
+      }
+.send:hover{
+background-color: #8000FF;
+}
+      .seleccionar{
+        background-color: #2196F3;
+width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+      }
+
+      input[type="file"] {
+    display: none;
+}
+  </style>
+    <title></title>
+</head>
+<body>
+
 
 
 <?php
@@ -40,8 +70,12 @@ require '../conexion/conexion.php';
 ?>
 <form action="funciones/subirfile.php" method="post" enctype="multipart/form-data">
 <div class="container-fluid">
-    <input name="archivo" type="file"   >
-    <input type="submit" value="Enviar" name="env"   >
+
+<label class="seleccionar">
+    <input name="archivo" type="file" required="required" />
+    Selecciona Archivo  ↑
+</label>
+    <input type="submit" value="Enviar" name="env" class="send"  >
 </div>
 </form>
 
@@ -88,3 +122,13 @@ require '../conexion/conexion.php';
                     </div>
                 </div>
             </div>   
+
+
+
+            </body>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+</html>
