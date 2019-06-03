@@ -54,7 +54,7 @@ require 'conexion/conexion.php';
                 <!--Con la clase nav creamos un menu de navegacion usando el elemento ul y li que son para listas-->
                 <ul class="nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="paginaprincipal.php">
+                        <a class="nav-link" href="javascript:vercosas();">
                             <!--Agregamos un icono para buscar un icono es es pecifico https://useiconic.com/open/ lo busca y solo se reemplaza su nombre-->
                             <i class="oi oi-folder"></i>
                             <p>Disco</p>
@@ -195,6 +195,12 @@ require 'conexion/conexion.php';
             });
         }
 
+
+        function vercosas() {
+          $(document).ready(function () {
+              $('.section').load("views/vercosas.php");
+            });
+        }
 
 
        
