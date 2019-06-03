@@ -68,7 +68,7 @@ echo'<script type="text/javascript">
                 </div>
                 <!--Con la clase nav creamos un menu de navegacion usando el elemento ul y li que son para listas-->
                 <ul class="nav">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="javascript:vercosas();">
                             <!--Agregamos un icono para buscar un icono es es pecifico https://useiconic.com/open/ lo busca y solo se reemplaza su nombre-->
                             <i class="oi oi-folder"></i>
