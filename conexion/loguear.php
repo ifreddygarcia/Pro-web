@@ -14,8 +14,10 @@ if($parametros['contar']>0){
    $_SESSION['username'] = $user;
   header("location: ../paginaprincipal.php");
 }else {
-    echo "<h1>datos incorrectos</h1> <br> ";
-    echo "<a href='../index.php'>Volver</a>";
+   echo'<script type="text/javascript">
+    			alert("El nombre de usuario o correo electronico están incorrectos");
+    			window.location.href="../index.php";
+    		</script>';
 }
 
 

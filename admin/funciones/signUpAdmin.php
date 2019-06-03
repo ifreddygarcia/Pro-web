@@ -13,7 +13,10 @@ $v6=$_GET['apelli'];
 $v7=$_GET['edad'];
 $v8=$_GET['correo'];
 
-//si el boton esta precionado se ejecuta la funcion
+
+
+
+//si el boton esta presionado se ejecuta la funcion
 if (isset($_GET['valboton'])) {
 
 		//consulta que inserta los datos

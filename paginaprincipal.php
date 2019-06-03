@@ -2,6 +2,8 @@
 require 'conexion/conexion.php';  
         session_start();
         $sesion = $_SESSION['username'];
+        if(isset($sesion)===true){
+
 
         //Con esta funcion guardamos el tipo de usuario que eres si es 0 eres normal y si es 1 eres admin
         $nombre=mysqli_query($conectar,"SELECT *FROM users where id_user >= 1");
@@ -12,11 +14,24 @@ require 'conexion/conexion.php';
                 
             }
         }
+    }
+        else{
+echo'<script type="text/javascript">
+                alert("No hay sesión iniciada");
+                window.location.href="index.php";
+            </script>';
+            }
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+<!--favicon-->
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="Images/favicon.ico" type="image/x-icon">
+
+
+<!--Bootstrap del navbar y sidebar-->
     <meta charset="utf-8" />
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
     <link href="fonts/open-iconic-bootstrap.css" rel="stylesheet">
@@ -48,7 +63,7 @@ require 'conexion/conexion.php';
                 <!--La clase logo nos crea el encabezado del sidebar donde podemos agregar un logo, texto-->
                 <div class="logo">
                     <a href="javascript:;" class="simple-text">
-                      INube <?php echo $sesion;   ?>
+                      Sesión <?php echo $sesion;   ?>
                     </a>
                 </div>
                 <!--Con la clase nav creamos un menu de navegacion usando el elemento ul y li que son para listas-->
@@ -57,25 +72,25 @@ require 'conexion/conexion.php';
                         <a class="nav-link" href="javascript:vercosas();">
                             <!--Agregamos un icono para buscar un icono es es pecifico https://useiconic.com/open/ lo busca y solo se reemplaza su nombre-->
                             <i class="oi oi-folder"></i>
-                            <p>Disco</p>
+                            <p>Documentos</p>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="paginaprincipal.php">
+                        <a class="nav-link" href="javascript:verMusica();">
                             <!-- <i class="nc-icon nc-bell-55"></i> -->
                             <i class="oi oi-musical-note"></i>
                             <p>Música</p>
                         </a>
                     </li>
 					<li>
-                        <a class="nav-link" href="paginaprincipal.php">
+                        <a class="nav-link" href="javascript:verPhotos();">
                             <!-- <i class="nc-icon nc-bell-55"></i> -->
                             <i class="oi oi-image"></i>
                             <p>Fotos</p>
                         </a>
                     </li>
 					<li>
-                        <a class="nav-link" href="paginaprincipal.php">
+                        <a class="nav-link" href="javascript:verVideos();">
                             <!-- <i class="nc-icon nc-bell-55"></i> -->
                             <i class="oi oi-video"></i>
                             <p>Videos</p>
@@ -103,7 +118,7 @@ require 'conexion/conexion.php';
             <!-- Navbar inicia-->
             <nav class="navbar navbar-expand-lg " color-on-scroll="500">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#pablo">Template</a>
+                    <a class="navbar-brand" >Mi nube</a>
                     <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar burger-lines"></span>
                         <span class="navbar-toggler-bar burger-lines"></span>
@@ -112,16 +127,6 @@ require 'conexion/conexion.php';
                     <div class="collapse navbar-collapse justify-content-end" id="navigation">
                         <!--Parte izquierda del navbar-->
                         <ul class="nav navbar-nav mr-auto">
-                            <li class="dropdown nav-item">
-                                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                                    <span class="no-icon">Nuevo</span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Nueva carpeta </a>
-                                    <a class="dropdown-item" href="#">Subir archivo</a>
-                                    <a class="dropdown-item" href="#">Subir carpeta</a>
-                                </ul>
-                            </li>
                         </ul>
                         <!--Parte derecha del navbar-->
                         <ul class="navbar-nav ml-auto">
@@ -201,7 +206,21 @@ require 'conexion/conexion.php';
               $('.section').load("views/vercosas.php");
             });
         }
-
+        function verMusica() {
+          $(document).ready(function () {
+              $('.section').load("views/verMusica.php");
+            });
+        }
+        function verPhotos() {
+          $(document).ready(function () {
+              $('.section').load("views/verPhotos.php");
+            });
+        }
+        function verVideos() {
+          $(document).ready(function () {
+              $('.section').load("views/verVideos.php");
+            });
+        }
 
        
             

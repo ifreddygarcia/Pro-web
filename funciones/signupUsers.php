@@ -3,6 +3,8 @@
 de alta un usuario y crearle un directorio en el 
 proyecto, no se visualiza-->
 <?php
+session_start();
+
 	//Referencia al archivo para crear conexión
 	require '../conexion/conexion.php';
 	//Referencia a crear registro en cloud
@@ -29,12 +31,14 @@ proyecto, no se visualiza-->
     			window.location.href="../views/signupUsers.html";
     		</script>';
  	}else{
- 		
-	//Query que inserta a los usuarios nuevos
+ 		//Query que inserta a los usuarios nuevos
 	$insertQuery = "INSERT INTO users(user,password,admin,name,last_name,age,mail) VALUES ('$username', '$passUser', 0, '$nameUser', '$lastNameUser', '$ageUser', '$mailUser')";
+
+
 	
 	//Validación de Sentencia creada correctamente
 	if ($conectar->query($insertQuery) === TRUE) {
+
 	    echo "Has sido registrado exitosamente!";
 	    echo "<br>";
 	    $nombre=mysqli_query($conectar,"SELECT *FROM users where id_user >= 1");
@@ -62,6 +66,20 @@ $consult=mysqli_query($conectar,"SELECT *FROM cloud where id_user_user= $su");
                 $nos=$ra['id_cloud'];
 
  }mysqli_query($conectar,"INSERT INTO directories (id_cloud_cloud,route_file) values ('$nos', '/files/'),('$nos', '/videos/'),('$nos', '/photos/'),('$nos', '/music/')");
+ //Valor que nos dirige a Pagina principal
+$query = "SELECT COUNT(*) as contar FROM users where user = '$username' and password = '$passUser' ";
+$bdconect = mysqli_query($conectar,$query);
+$parametros = mysqli_fetch_array($bdconect);
+
+if($parametros['contar']>0){
+   $_SESSION['username'] = $username;
+  header("location: ../paginaprincipal.php");
+}
+
+else {
+   
+    echo "<a href='../error404.php'>Volver</a>";
+}
 //para enviar un correo electronico a la persona que creo su cuenta
 if (isset($_POST['enviar'])) {
 	if (!empty($_POST['mailUser']) && !empty($_POST['username'])) {
