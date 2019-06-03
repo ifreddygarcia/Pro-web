@@ -10,11 +10,13 @@
 <style type="text/css">
 	.Nombre{
 font-family: 'Montserrat', sans-serif;
+text-align: center;
 	}
 	.Persona{
-	width: 300px;
-	height: 300px;
+	width: 200px;
+	height: 200px;
 	border-radius: 50%;
+	text-align: center;
 	}
 	.descripcion{
 font-family: 'Montserrat', sans-serif;
@@ -26,7 +28,8 @@ font-family: 'Montserrat', sans-serif;
 	.Volver{
 		font-family: 'Montserrat', sans-serif;
 		color: white;
-		
+		text-align: center;
+	
 	}
 </style>
 	<title>
@@ -34,9 +37,52 @@ font-family: 'Montserrat', sans-serif;
 	</title>
 </head>
 <body class="body">
-	<h1 class="Nombre"> About Us<h3><a href="paginaprincipal.php" class="Volver">Volver</a></h3></h1>
+	<div><center><h1 class="Nombre"> About Us <h4> <a href="paginaprincipal.php" class="Volver"> Volver</a></h4></h1></center></div>
+    <!--<h3><a href="paginaprincipal.php" class="Volver"><br>Volver</a></h3-->
+<div><center>
 
-<div class="container">
+				<div class="col-xs-11 col-sm-2 ccr-first-team element_from_left ">
+							<img class="img-responsive Persona" src="https://scontent.fmid1-2.fna.fbcdn.net/v/t1.0-9/52782476_2018060201582124_7518365467400994816_n.jpg?_nc_cat=101&_nc_eui2=AeGkGF8h4FtrcQiJjkDiU9s2RCXotfQsAHXFvUVO-phqKUJFg0pAaBG9sy_uheqqmbG6GhfKtoS-eQTOVKJ8znQkg_t9BFDbB6-xCAHoTxiAfg&_nc_ht=scontent.fmid1-2.fna&oh=bebaf258d0d31bc1cf892397f81479cd&oe=5D8834DB"alt="">
+							<h2>Ávila Ventura Nehemías Agustín</h2>
+							<p class="designation"></p>
+							<p>Boy, Son, Brother, Friend, Enginner Student, Cinema lover, Literator...<br>Potterhead, Demigod, Walker, Also a Guardian of the traveler <br>
+	                        22 yo |👬</p>
+							
+						</div>	
+						<div class="col-xs-10 col-sm-2 ccr-second-team element_from_left">
+							<img class="img-responsive Persona" src="https://scontent.fmid1-1.fna.fbcdn.net/v/t1.0-9/23915897_2473954752829790_5739657109880103304_n.jpg?_nc_cat=104&_nc_eui2=AeG94cU_8bw1HYcOOJ1UzZCXStMWnKFnmX-q8fJ3jNelDGuoftxYzyPKuO3Pe1cbs9HrEbPQi2SUYiRcQCE2jy-55qmDto7XrtBMntVjG8BHWw&_nc_ht=scontent.fmid1-1.fna&oh=c4a92f63448df83949c624e3fc809fa3&oe=5D976702" alt="">
+							<h2>De Yta Calixto Lindy Mar</h2>
+							<p class="designation"></p>
+							<p>Ing. En Sistemas C. 👑 | I don't believe in humans</p>
+							
+						</div>
+						<div class="col-xs-10 col-sm-2 ccr-third-team element_from_right">
+							<img class="img-responsive Persona" src="https://scontent.fmid1-1.fna.fbcdn.net/v/t1.0-9/21077339_10213626329002828_1723302545695093142_n.jpg?_nc_cat=110&_nc_eui2=AeEkX7AKrIMvNnRBq-WqeZMvTThXnvNaWc1R-Mlefoax3V4Cr0Ta9_DobBKx_8uPvmjXiUyyBZiI5Jy7MFLAL9dCnbCVYk59lI2PInKEvqUqWg&_nc_ht=scontent.fmid1-1.fna&oh=d1a4df492184285e897499f1768426c0&oe=5D582A03" alt="">
+							<h3>Eb Pech Sergio Esteban</h3>
+							<p class="designation"></p>
+							<p>Un pelaná mas en este mundo lleno de pelanaes</p>
+							
+						</div>
+						<div class="col-xs-10 col-sm-2 ccr-fourth-team element_from_right">
+							<img class="img-responsive Persona" src="https://scontent.fmid1-1.fna.fbcdn.net/v/t1.0-9/46508022_1978019085638759_2523120809103327232_n.jpg?_nc_cat=111&_nc_eui2=AeEVK5aaQrFyd4aXupvhOJUrIgihKbsYGi0336VC7ji2X7H9zN-XoHm4i853fIJFl6-7JMdVq7jRmTeJJODUd9OMp_z7Mrldxhv49JSdWnyI9Q&_nc_ht=scontent.fmid1-1.fna&oh=c90450929b6842d748dd8aa32a6f29a0&oe=5D9760A8" alt="">
+							<h3>García izquierdo Freddy Eduardo</h3>
+							<p class="designation"></p>
+							<p>Lo que sea</p>
+							
+						</div>
+
+						<div class="col-xs-10 col-sm-2 ccr-fourth-team element_from_right">
+							<img class="img-responsive Persona" src="https://scontent.fmid1-2.fna.fbcdn.net/v/t1.0-9/61189142_2501401133226858_5378363940193435648_n.jpg?_nc_cat=103&_nc_eui2=AeHxAm4kzNSOO8aKvGTPQMh1iJrJY0tuVTxOZ_DI96wzdMldZUpp5-mKK6msK8FIRixGjbQ9VoQAWdbMxfQrdoYvbAo9joEI26nx7v4C3Ixv9w&_nc_ht=scontent.fmid1-2.fna&oh=440d55034212cc94973b1a32f84fb080&oe=5D8CF628" alt="">
+							<h3>Ponce Chávez Humberto</h3>
+							<p class="designation"></p>
+							<p>"Hilarante, lo mejor del siglo"<br>
+                                - The New York Times<br>
+                                "Épico y sin igual" <br>
+                                -Revista Time</p></p>
+							
+						</div>
+						</center></div>
+<!--div class="container">
 	<div class="Nombre">
 		<h2>Ávila Ventura Nehemías Agustín</h2>
 	</div>
@@ -66,8 +112,8 @@ font-family: 'Montserrat', sans-serif;
 - The New York Times<br>
 "Épico y sin igual" <br>
 -Revista Time</p>
-</div>
-<h3><a href="paginaprincipal.php" class="Volver">Volver</a></h3>
+</div-->
+
 
 </body>
 <!-- Scripts que trabajan con bootstrap para hacer la página responsive-->		

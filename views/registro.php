@@ -60,16 +60,16 @@
             <input type="text" class="form-control" placeholder="Apellido" required="required">
         </div>
         <div class="form-group">
-            <input type="Password" class="form-control" placeholder="Edad" required="required">
+            <input type="number" class="form-control" placeholder="Edad" required="required" min="18" max="100">
         </div>
 		 <div class="form-group">
-            <input type="text" class="form-control" placeholder="E-Mail" required="required">
+            <input type="email" class="form-control" placeholder="E-Mail" required="required" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.]a-zA-Z]{1,5}">
         </div>
         <div class="form-group">
             <input type="text" class="form-control" placeholder="Usuario" required="required">
         </div>
         <div class="form-group">
-            <input type="Password" class="form-control" placeholder="Contraseña" required="required">
+            <input type="Password" class="form-control" placeholder="Contraseña" required="required" maxlength="8">
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-primary btn-block">Envíar</button>

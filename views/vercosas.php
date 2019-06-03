@@ -80,6 +80,7 @@ require '../conexion/conexion.php';
 </form>
 
 <div class="content">
+    <div id="resultado"></div>
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-12">
@@ -107,8 +108,23 @@ require '../conexion/conexion.php';
                                                          echo '<td>'.$arr['uploaded_at'].'</td>';
                                                          echo '<td>'.$arr['file_size'].' MB</td>';
                                                          echo '<td>
-                                                <button id="" class="btn btn-danger"><i class="oi oi-delete"></i></button>
-                                                </td>';
+                                                            <button id="11'.$arr['id_file'].'" type="submit" value="'.$arr['id_file'].'" class="btn btn-danger"><i class="oi oi-delete"></i></button>                        
+                        <script>
+                                $(document).ready(function(){
+                                    $("#11'.$arr['id_file'].'").click(function(){
+
+                                        var idfile = $("#11'.$arr['id_file'].'").val();
+
+                                        $.get("funciones/deleteCosas.php", {valor:idfile}, function(datos){
+                                            $("#resultado").html(datos);
+                                        });
+
+                                    });
+                                });
+                        </script>
+
+
+                                                            </td>';
                                                      echo '</tr>';
                                                 }   
                                             ?>

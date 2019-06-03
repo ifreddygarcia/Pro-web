@@ -99,11 +99,11 @@
 			</div>
 			<div class="form-group">
 				<label class="eti"> E-Mail: </label><br>
-				<input type="text" class="dato" name="mailUser" value="<?php echo $_SESSION['correoUser']; ?>"><br>
+				<input type="text" class="dato" name="mailUser" value="<?php echo $_SESSION['correoUser']; ?>" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.]a-zA-Z]{1,5}"> <br>
 			</div>
 			<div class="form-group">
 				<label class="eti"> Contraseña: </label><br>
-				<input type="text" class="dato" name="passUser" value="<?php echo $_SESSION['passUser']; ?>"><br>
+				<input type="text" class="dato" name="passUser" value="<?php echo $_SESSION['passUser']; ?>" maxlength="8"><br>
 			</div>
 		<div class="form-group">
 			<button type="submit" class="btn btn-primary btn-block"> Actualizar </button>

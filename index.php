@@ -104,7 +104,11 @@
        <form action="conexion/loguear.php" method="POST">
         <input type="text" name="usuario" placeholder="Digite su usuario" class="usuario" required="required">
          <br><br>
+<<<<<<< HEAD
          <input type="password" name="clave" placeholder="Digite clave" class="password" required="required">
+=======
+         <input type="password" name="clave" placeholder="Digite clave" class="password" maxlength="8">
+>>>>>>> master
          <br><br>
          <button type="submit" class="enter"> ENTRAR</button>
 		 <br>
