@@ -41,10 +41,13 @@
 	if (isset($_POST['nameUser'])) {
 		$nameUser= $_POST['nameUser'];
 		$updateQuery = "UPDATE users SET name = '$nameUser' WHERE user = '$userSession' ";
-		$updateUser= mysqli_query($conectar,$updateQery);
+		$updateUser= mysqli_query($conectar,$updateQuery);
 		//Bloque If que valida si se completó la sentencia y redirecciona al formulario
 		if ($updateUser === TRUE) {
-			header("location: ../views/updateUsers.php");
+			echo'<script type="text/javascript">
+	    			alert("Datos actualizados correctamente!");
+	    			window.location.href="../views/updateUsers.php";
+    			</script>';
 		}else{
 			//Aquí debería redirigir a la página de error pero no se porque no lo hace xd
 		}
@@ -55,7 +58,10 @@
 		$updateUser= mysqli_query($conectar,$updateQuery);
 		///Bloque If que valida si se completó la sentencia y redirecciona al formulario
 		if ($updateUser === TRUE) {
-			header("location: ../views/updateUsers.php");
+			echo'<script type="text/javascript">
+	    			alert("Datos actualizados correctamente!");
+	    			window.location.href="../views/updateUsers.php";
+    			</script>';
 		}else{
 			//Aquí debería redirigir a la página de error pero no se porque no lo hace xd
 		}
@@ -66,7 +72,10 @@
 		$updateUser= mysqli_query($conectar,$updateQuery);
 		//Bloque If que valida si se completó la sentencia y redirecciona al formulario
 		if ($updateUser === TRUE) {
-			header("location: ../views/updateUsers.php");
+			echo'<script type="text/javascript">
+	    			alert("Datos actualizados correctamente!");
+	    			window.location.href="../views/updateUsers.php";
+    			</script>';
 		}else{
 			//Aquí debería redirigir a la página de error pero no se porque no lo hace xd
 		}
@@ -77,7 +86,10 @@
 		$updateUser= mysqli_query($conectar,$updateQuery);
 		//Bloque If que valida si se completó la sentencia y redirecciona al formulario
 		if ($updateUser === TRUE) {
-			header("location: ../views/updateUsers.php");
+			echo'<script type="text/javascript">
+	    			alert("Datos actualizados correctamente!");
+	    			window.location.href="../views/updateUsers.php";
+    			</script>';
 		}else{
 			//Aquí debería redirigir a la página de error pero no se porque no lo hace xd
 		}
@@ -88,7 +100,10 @@
 		$updateUser= mysqli_query($conectar,$updateQuery);
 		//Bloque If que valida si se completó la sentencia y redirecciona al formulario
 		if ($updateUser === TRUE) {
-			header("location: ../views/updateUsers.php");
+			echo'<script type="text/javascript">
+	    			alert("Datos actualizados correctamente!");
+	    			window.location.href="../views/updateUsers.php";
+    			</script>';
 		}else{
 			//Aquí debería redirigir a la página de error pero no se porque no lo hace xd
 		}

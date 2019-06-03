@@ -52,11 +52,11 @@
 		font-weight: bold;
     }
     .dato{
-    	 width: 60%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+    	 width: 80%;
+		  padding: 12px 20px;
+		  margin: 8px 0;
+		  border: 1px solid #ccc;
+		  border-radius: 4px;
     }
     .colort{
     	color: black;
@@ -99,15 +99,29 @@
 			</div>
 			<div class="form-group">
 				<label class="eti"> E-Mail: </label><br>
-				<input type="text" class="dato" name="mailUser" value="<?php echo $_SESSION['correoUser']; ?>" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.]a-zA-Z]{1,5}"> <br>
+				<input type="email" class="dato" name="mailUser" value="<?php echo $_SESSION['correoUser']; ?>" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.]a-zA-Z]{1,5}"> <br>
 			</div>
 			<div class="form-group">
 				<label class="eti"> Contraseña: </label><br>
-				<input type="text" class="dato" name="passUser" value="<?php echo $_SESSION['passUser']; ?>" maxlength="8"><br>
+				<input type="password" class="dato" name="passUser" value="<?php echo $_SESSION['passUser']; ?>" maxlength="8" id="password_confirm"><br>
+			</div>
+			<div class="form-group">
+				<label class="eti"> Confirma Contraseña: </label><br>
+				<input class="dato" name="password_confirm" type="password" id="password_confirm" oninput="check(this)" maxlength="8"/>
 			</div>
 		<div class="form-group">
 			<button type="submit" class="btn btn-primary btn-block"> Actualizar </button>
 		</div>
+		<script language='javascript' type='text/javascript'>
+	    	function check(input) {
+	        if (input.value != document.getElementById('password_confirm').value) {
+		            input.setCustomValidity('Las contraseñas no coinciden.');
+		        } else {
+		            // input is valid -- reset the error message
+		            input.setCustomValidity('');
+		        }
+	    	}
+		</script>
 	</form>
 
 	<p class="text-center"><a href="../paginaprincipal.php" class="colort">Regresar</a></p>
