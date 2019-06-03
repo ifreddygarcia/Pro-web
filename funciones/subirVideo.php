@@ -39,7 +39,7 @@ require '../conexion/conexion.php';
                 $archivoname= basename($_FILES['archivo']['name']);
                 $archivoname2="data/users/$nsu/files/".$archivoname;
 
-        if(mysqli_query($conectar,"INSERT INTO files (id_direct_direct,file_name,file_type) values ('$iddirectorio', '$archivoname', '')")){
+        if(mysqli_query($conectar,"INSERT INTO files (id_direct_direct,file_name,file_size) values ('$iddirectorio', '$archivoname', '')")){
                 $target_path = "../".$ruta2nivel;
                 $target_path = $target_path . basename( $_FILES['archivo']['name']); 
 

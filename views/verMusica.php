@@ -1,5 +1,3 @@
-
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
 
@@ -60,6 +58,8 @@ require '../conexion/conexion.php';
                                         <thead>
                                             <th>nombre</th>
                                             <th>fecha</th>
+                                            <th> Tamaño </th>
+                                            <th>Eliminar</th>
                                         </thead>
                                         <tbody>
                                             
@@ -67,8 +67,14 @@ require '../conexion/conexion.php';
                                             while ($arr= mysqli_fetch_array($sql23) )               //obtenemos un archivo y luego otro sucesivamente
                                                 {
                                                     echo '<tr>';
-                                                    echo '<td><a href="'.$ruta2nivel.$arr['file_name'].'">'.$arr['file_name'].'</a></td>';
-                                                     echo '<td>'.$arr['uploaded_at'].'</td>';
+                                                        echo '<td>
+                                                                <a href="'.$ruta2nivel.$arr['file_name'].'">'.$arr['file_name'].'</a>
+                                                                </td>';
+                                                         echo '<td>'.$arr['uploaded_at'].'</td>';
+                                                         echo '<td>'.$arr['file_size'].' MB</td>';
+                                                         echo '<td>
+                                                <button id="" class="btn btn-danger"><i class="oi oi-delete"></i></button>
+                                                </td>';
                                                      echo '</tr>';
                                                 }   
                                             ?>
