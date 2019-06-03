@@ -15,6 +15,24 @@ proyecto, no se visualiza-->
 	$username= $_POST["username"];
 	$passUser= $_POST["passUser"];
 	//Query qu inserta a los usuarios nuevos
+
+	//Prueba de que el username no se repita
+	$buscarUsuario = "SELECT * FROM users
+
+ WHERE user = '$username' OR mail = '$mailUser' ";
+
+ $result = $conectar->query($buscarUsuario);
+ 
+ $count = mysqli_num_rows($result);
+ 
+ if ($count == 1) {
+
+echo'<script type="text/javascript">
+    alert("El nombre de usuario o correo electronico ya existe");
+    window.location.href="../views/signupUsers.html";
+    </script>';
+ }
+else{
 	$insertQuery = "INSERT INTO users(user,password,admin,name,last_name,age,mail) VALUES ('$username', '$passUser', 0, '$nameUser', '$lastNameUser', '$ageUser', '$mailUser')";
 	
 	//Validación de Sentencia creada correctamente
@@ -25,6 +43,7 @@ proyecto, no se visualiza-->
 		createUserDir();
 	} else {
     echo "Error: " . $insertQuery . "<br>" . $conectar->error;
+}
 }
 //para enviar un correo electronico a la persona que creo su cuenta
 if (isset($_POST['enviar'])) {
