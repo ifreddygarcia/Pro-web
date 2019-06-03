@@ -16,33 +16,30 @@
     	
 	}
 	
-	body { background: #9368E9;}
-.error-template {padding: 40px 15px;text-align: center;}
-.error-actions {margin-top:15px;margin-bottom:15px;}
-.error-actions .btn { margin-right:10px; }
+	.body{
+        background-image: url(../Images/404.jpg);
+          background-color: #cccccc; 
+          background-repeat: no-repeat;
+          background-size: cover;
+    }
 	
 </style>
 </head>
-	
+	<body class="body">
 	
     <div class="container">
     <div class="row">
+        <br>
+        <br>
         <div class="col-md-12">
-            <div class="error-template">
-                <h1>
-                    Error 404 :(</h1>
-                <h2>
-                    Página no encontrada</h2>
-                <div class="error-details">
-                    Lo sentimos, ha ocurrido un errror o la página no se encuentra
-                </div>
                 <div class="error-actions">
-                    <a href="#" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-home"></span>
+                    <a href="../index.php" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-home"></span>
                         Regresar a Inicio </a><a href="#contacto" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-envelope"></span> Contactar a soporte </a>
                 </div>
             </div>
         </div>
     </div>
 </div>
+</body>
 
 </html>                                		                            
