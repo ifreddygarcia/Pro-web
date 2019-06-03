@@ -65,25 +65,25 @@ require 'conexion/conexion.php';
                         <a class="nav-link" href="javascript:vercosas();">
                             <!--Agregamos un icono para buscar un icono es es pecifico https://useiconic.com/open/ lo busca y solo se reemplaza su nombre-->
                             <i class="oi oi-folder"></i>
-                            <p>Disco</p>
+                            <p>Documentos</p>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="paginaprincipal.php">
+                        <a class="nav-link" href="javascript:verMusica();">
                             <!-- <i class="nc-icon nc-bell-55"></i> -->
                             <i class="oi oi-musical-note"></i>
                             <p>Música</p>
                         </a>
                     </li>
 					<li>
-                        <a class="nav-link" href="paginaprincipal.php">
+                        <a class="nav-link" href="javascript:verPhotos();">
                             <!-- <i class="nc-icon nc-bell-55"></i> -->
                             <i class="oi oi-image"></i>
                             <p>Fotos</p>
                         </a>
                     </li>
 					<li>
-                        <a class="nav-link" href="paginaprincipal.php">
+                        <a class="nav-link" href="javascript:verVideos();">
                             <!-- <i class="nc-icon nc-bell-55"></i> -->
                             <i class="oi oi-video"></i>
                             <p>Videos</p>
@@ -120,16 +120,6 @@ require 'conexion/conexion.php';
                     <div class="collapse navbar-collapse justify-content-end" id="navigation">
                         <!--Parte izquierda del navbar-->
                         <ul class="nav navbar-nav mr-auto">
-                            <li class="dropdown nav-item">
-                                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                                    <span class="no-icon">Nuevo</span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Nueva carpeta </a>
-                                    <a class="dropdown-item" href="#">Subir archivo</a>
-                                    <a class="dropdown-item" href="#">Subir carpeta</a>
-                                </ul>
-                            </li>
                         </ul>
                         <!--Parte derecha del navbar-->
                         <ul class="navbar-nav ml-auto">
@@ -209,7 +199,21 @@ require 'conexion/conexion.php';
               $('.section').load("views/vercosas.php");
             });
         }
-
+        function verMusica() {
+          $(document).ready(function () {
+              $('.section').load("views/verMusica.php");
+            });
+        }
+        function verPhotos() {
+          $(document).ready(function () {
+              $('.section').load("views/verPhotos.php");
+            });
+        }
+        function verVideos() {
+          $(document).ready(function () {
+              $('.section').load("views/verVideos.php");
+            });
+        }
 
        
             

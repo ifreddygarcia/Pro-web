@@ -1,5 +1,3 @@
-
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
 
@@ -29,7 +27,7 @@ require '../conexion/conexion.php';
             $sql=mysqli_query($conectar,"SELECT *FROM directories where id_cloud_cloud = '$idclo' " );
             while ($arreidcloud2= mysqli_fetch_array($sql) )               //obtenemos un archivo y luego otro sucesivamente
                              {
-                                if ($arreidcloud2['route_file'] == "/files/") {
+                                if ($arreidcloud2['route_file'] == "/videos/") {
                                     $ruta2nivel=$ruta.$arreidcloud2['route_file']; 
                                     $iddirectorio=$arreidcloud2['id_directories']; 
                                 }
@@ -40,7 +38,7 @@ require '../conexion/conexion.php';
 
 
 ?>
-<form action="funciones/subirfile.php" method="post" enctype="multipart/form-data">
+<form action="funciones/subirVideo.php" method="post" enctype="multipart/form-data">
 <div class="container-fluid">
     <input name="archivo" type="file"   >
     <input type="submit" value="Enviar" name="env"   >
@@ -53,13 +51,13 @@ require '../conexion/conexion.php';
                         <div class="col-md-12">
                             <div class="card strpied-tabled-with-hover">
                                 <div class="card-header ">
-                                    <h4 class="card-title">Mis Documentos</h4>
+                                    <h4 class="card-title">Mis Videos</h4>
                                 </div>
                                 <div class="card-body table-full-width table-responsive">
                                     <table class="table table-hover table-striped">
                                         <thead>
-                                            <th>nombre</th>
-                                            <th>fecha</th>
+                                            <th>Nombre</th>
+                                            <th>Fecha</th>
                                         </thead>
                                         <tbody>
                                             
