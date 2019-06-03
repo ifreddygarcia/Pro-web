@@ -37,10 +37,21 @@ proyecto, no se visualiza-->
 	if ($conectar->query($insertQuery) === TRUE) {
 	    echo "Has sido registrado exitosamente!";
 	    echo "<br>";
+	    $nombre=mysqli_query($conectar,"SELECT *FROM users where id_user >= 1");
+        while ($nom= mysqli_fetch_array($nombre)){
+            
+            if ($nom['user']== $username) {
+                $su=$nom['id_user'];
+                $su2=$nom['user'];
+                $dirUsers2 = '../data/users/';
+                $nsu=$dirUsers2.$su2;
+
+            }
+        }
 	    //Llamada a función para crear directorio
 		createUserDir();
 		//Crear sus espacio en la nube
-		insertCloud($idUserCloud,$cloudRoute,$conectar);
+		insertCloud($su,$nsu,$conectar);
 	} else {
     echo "Error: " . $insertQuery . "<br>" . $conectar->error;
 }

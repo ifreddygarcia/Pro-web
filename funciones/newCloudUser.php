@@ -4,22 +4,22 @@
 	//Invocamos conexión a la BD
 	require '../conexion/conexion.php';
 	//Invocamos la función para obtener el Id del usuario actual
-	require '../funciones/getIdUser.php';
+	//require '../funciones/getIdUser.php';
 	//Invocamos a la creación de directorios
 	require '../funciones/newDirectoryUser.php';
 	//---------------------------------------------------------------------------------------
 	//Variables
 		//Obtenemos id del usuario
-		getID($selectUser);
-		$idUserCloud = $_SESSION['idUser'];
+		//getID($selectUser);
+		//$idUserCloud = $_SESSION['idUser'];
 		//Obtenemos nombre de usuario
-		$userNameCloud = $_SESSION['username'];
+		//$userNameCloud = $_SESSION['username'];
 		//Concatenamos para obtener la ruta completa
-		$cloudRoute = $dirUsers.$userNameCloud;
+		//$cloudRoute = $dirUsers.$nsu;
 	//Función para insertar en la tabla Cloud
-	function insertCloud($idUserCloud,$cloudRoute,$conectar){
+	function insertCloud($su,$nsu,$conectar){
 		//Querys
-		$insertCloudQuery = "INSERT INTO cloud(id_user_user,route) VALUES ($idUserCloud,'$cloudRoute')";
+		$insertCloudQuery = "INSERT INTO cloud(id_user_user,route) VALUES ($su,'$nsu')";
 		//Validación de Sentencia creada correctamente
 		if ($conectar->query($insertCloudQuery) === TRUE) {
 		    echo "Espacio en la nube creado! :)";
