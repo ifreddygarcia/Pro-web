@@ -26,4 +26,20 @@ proyecto, no se visualiza-->
 	} else {
     echo "Error: " . $insertQuery . "<br>" . $conectar->error;
 }
+//para enviar un correo electronico a la persona que creo su cuenta
+if (isset($_POST['enviar'])) {
+	if (!empty($_POST['mailUser']) && !empty($_POST['username'])) {
+		$asunto="Creacion de cuenta inube";
+		$msg="Hola gracias por crear una inube";
+		$header="From: noreply@example.com"."\r\n";
+		$header.="Reply-To: noreply@example.com"."\r\n";
+		$header."X-Mailer: PHP/".phpversion();
+		$mail= @mail($mailUser,$asunto,$msg,$header);
+		if($mail) {
+			echo "<h4>Se ha enviado un mail a tu correo</h4>";
+		}else{
+			echo "<h4>No se pudo enviar el mail a tu correo</h4>";
+		}
+	}
+}
 ?>
