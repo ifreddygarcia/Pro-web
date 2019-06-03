@@ -43,7 +43,7 @@ proyecto, no se visualiza-->
             if ($nom['user']== $username) {
                 $su=$nom['id_user'];
                 $su2=$nom['user'];
-                $dirUsers2 = '../data/users/';
+                $dirUsers2 = 'data/users/';
                 $nsu=$dirUsers2.$su2;
 
             }
@@ -56,6 +56,12 @@ proyecto, no se visualiza-->
     echo "Error: " . $insertQuery . "<br>" . $conectar->error;
 }
 }
+$consult=mysqli_query($conectar,"SELECT *FROM cloud where id_user_user= $su");
+        while ($ra= mysqli_fetch_array($consult)){
+            
+                $nos=$ra['id_cloud'];
+
+ }mysqli_query($conectar,"INSERT INTO directories (id_cloud_cloud,route_file) values ('$nos', '/files/'),('$nos', '/videos/'),('$nos', '/photos/'),('$nos', '/music/')");
 //para enviar un correo electronico a la persona que creo su cuenta
 if (isset($_POST['enviar'])) {
 	if (!empty($_POST['mailUser']) && !empty($_POST['username'])) {
