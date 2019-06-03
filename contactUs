@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Instanciando bootstrap -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--Fuente montserrat-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<title>
+		Contáctanos
+	</title>
+	<style type="text/css">
+		
+.body{
+	background: #9368E9;
+	font-family: 'Montserrat', sans-serif;
+}
+.fl{
+ width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.fl2{
+ width: 20%;
+ height: 100px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.colort{
+	color: black;
+}
+
+
+.bot{
+ width: 30%;
+ height: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  background-color: blue;
+  color: white;
+}
+
+	</style>
+</head>
+<body class="body">
+	<center>
+
+<div class="reg-form">
+    <form action="funciones/contactUs.php" method="post">
+        <h1 class="text">Envíanos tu problema y si el profe nos pasa lo solucionaremos</h1> 
+		 <div class="form-group">
+            <input type="text" class="fl" placeholder="Nombre" required="required" name="Nombre">
+        </div>
+        <div class="form-group">
+            <input type="email" class="fl" placeholder="Correo" required="required" name="Correo">
+        </div>
+        <div class="form-group">
+            <input type="text" class="fl2" placeholder="Tu queja" required="required" name="Texto">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="bot" name="enviar">Envíar</button>
+        </div>
+              
+    </form>
+    <p class="text-center"><a href="paginaprincipal.php" class="colort">Regresar</a></p>
+</div>
+</center>
+</body>
+</html>

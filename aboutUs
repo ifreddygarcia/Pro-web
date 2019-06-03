@@ -21,8 +21,10 @@ font-family: 'Montserrat', sans-serif;
 	}
 	.body{
  background: #9368E9;
+ font-family: 'Montserrat', sans-serif;
 	}
 	.Volver{
+		font-family: 'Montserrat', sans-serif;
 		color: white;
 		
 	}

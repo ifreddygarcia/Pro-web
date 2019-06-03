@@ -2,6 +2,8 @@
 require 'conexion/conexion.php';  
         session_start();
         $sesion = $_SESSION['username'];
+        if(isset($sesion)===true){
+
 
         //Con esta funcion guardamos el tipo de usuario que eres si es 0 eres normal y si es 1 eres admin
         $nombre=mysqli_query($conectar,"SELECT *FROM users where id_user >= 1");
@@ -10,10 +12,15 @@ require 'conexion/conexion.php';
             if ($nom['user']== $sesion) {
                 $quesoy=$nom['admin'];
                 
-            }else{
-
             }
         }
+    }
+        else{
+echo'<script type="text/javascript">
+                alert("No hay sesión iniciada");
+                window.location.href="index.php";
+            </script>';
+            }
 ?>
 <!DOCTYPE html>
 <html lang="en">
