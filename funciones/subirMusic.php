@@ -44,7 +44,7 @@ require '../conexion/conexion.php';
                 $target_path = $target_path . basename( $_FILES['archivo']['name']); 
 
             if(move_uploaded_file($_FILES['archivo']['tmp_name'], $target_path)) { 
-                echo "El archivo ". basename( $_FILES['archivo']['name']). " ha sido enviado";
+      
                 $kbSize = filesize($target_path);
 
                 
@@ -53,6 +53,12 @@ require '../conexion/conexion.php';
                     echo " El tamaño es: ".substr($kbMb,0,5);
                 
                 mysqli_query($conectar,"UPDATE files SET file_size ='$kbMb' where file_name ='$archivoname'");
+
+                //mensaje que te devuelve
+                echo'<script type="text/javascript">
+                alert("Se subió el archivo");
+                window.location.href="../paginaprincipal.php";
+            </script>';
             } else{
                 echo "Ha ocurrido un error, trate de nuevo!";
             }

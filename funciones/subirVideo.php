@@ -53,6 +53,13 @@ require '../conexion/conexion.php';
                     echo " El tamaño es: ".substr($kbMb,0,5);
                 
                 mysqli_query($conectar,"UPDATE files SET file_size ='$kbMb' where file_name ='$archivoname'");
+
+
+                //mensaje que te devuelve
+                echo'<script type="text/javascript">
+                alert("Se subió el archivo");
+                window.location.href="../paginaprincipal.php";
+            </script>';
             } else{
                 echo "Ha ocurrido un error, trate de nuevo!";
             }
