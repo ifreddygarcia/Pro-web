@@ -73,7 +73,7 @@ $parametros = mysqli_fetch_array($bdconect);
 
 if($parametros['contar']>0){
    $_SESSION['username'] = $username;
-  header("location: ../paginaprincipal.php");
+  header("location: ../data/generateXML.php");
 }
 
 else {
