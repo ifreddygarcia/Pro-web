@@ -88,8 +88,9 @@ $resultado = $conexion->query($sql);
 /*
 
 	while ($register=mysqli_fetch_array($query)) {
-			
-			$id_userT=$xml->createElement("id_user",$register['id_user']);
+			<tr>
+
+			<td>¿php $id_userT=$xml->createElement("id_user",$register['id_user']);
 			$users->appendChild($id_userT);
 
 			$usertableT=$xml->createElement("user",$register['user']);
